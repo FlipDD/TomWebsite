@@ -64,10 +64,12 @@ const projects = [
 export default function PortfolioGrid() {
   const [workHover, setWorkHover] = useState(false);
   return (
-    <div className="relative min-h-screen w-full flex flex-col justify-between bg-black" style={{ minHeight: '100vh' }}>
+    <div className="relative min-h-screen bg-black overflow-hidden">
       {/* Logo */}
       <div className="absolute top-8 left-8 z-20">
-        <Image src="/logo/logowhite.png" alt="Tomás Mateus Logo" width={220} height={60} />
+        <Link href="/">
+          <Image src="/logo/logowhite.png" alt="Tomás Mateus Logo" width={220} height={60} />
+        </Link>
       </div>
 
       {/* Sidebar Navigation */}
@@ -79,12 +81,16 @@ export default function PortfolioGrid() {
             onMouseEnter={() => setWorkHover(true)}
             onMouseLeave={() => setWorkHover(false)}
           >
-            <button
-              className="text-4xl font-extrabold font-[Manrope] text-white block transition-all duration-200 focus:outline-none"
+            <Link
+              href="/portfolio"
+              className="text-4xl font-extrabold font-[Manrope] text-white block transition-all duration-200 focus:outline-none relative group"
               style={{ letterSpacing: 1 }}
             >
-              WORK
-            </button>
+              <span className="relative">
+                WORK
+                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-white transition-all duration-300 group-hover:w-full"></span>
+              </span>
+            </Link>
             {/* Sub-links appear on hover */}
             <div
               className={`overflow-hidden transition-all duration-300 text-white text-lg font-medium font-[Manrope] text-right pl-4 ${workHover ? 'max-h-40 opacity-100' : 'max-h-0 opacity-0'} flex flex-col space-y-1`}

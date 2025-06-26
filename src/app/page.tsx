@@ -126,8 +126,8 @@ export default function Home() {
       </div>
 
       {/* Footer */}
-      <footer className="absolute bottom-8 left-0 w-full text-center z-20">
-        <p className="text-white text-lg font-[Manrope]">
+      <footer className="fixed bottom-0 left-0 w-full text-center z-40 bg-black">
+        <p className="text-white text-[20px] font-[Manrope] m-0 p-2">
           © 2025 Tomás Mateus. All rights reserved
         </p>
       </footer>

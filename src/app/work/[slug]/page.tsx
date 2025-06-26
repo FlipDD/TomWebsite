@@ -26,84 +26,76 @@ const projects: { [key: string]: any } = {
     videoUrl: 'https://www.youtube.com/watch?v=05SRUBxRbQQ',
   },
   'vsp': {
-    title: 'VSP',
+    title: 'VSP AST - AGUARELA',
     description: 'Music video for VSP',
-    director: 'André Canicos',
+    director: 'Gonçalo Afonso',
     production: 'One House Only',
     dop: 'Bernardo Infante',
-    videoUrl: null,
+    videoUrl: 'https://www.youtube.com/watch?v=byXXO86c-Js',
   },
   'sharkskin': {
     title: 'Sharkskin',
     description: 'Music video for Sharkskin',
-    director: 'André Canicos',
-    production: 'One House Only',
-    dop: 'Bernardo Infante',
-    videoUrl: null,
+    director: 'Francisco Miguel',
+    production: '',
+    dop: 'Dimi Vakrilov',
+    videoUrl: '',
   },
   'richie': {
-    title: 'Richie',
-    description: 'Music video for Richie',
-    director: 'André Canicos',
+    title: 'Richie Campbell - Before I Lose My Voice',
+    description: 'Music video for Richie Campbell',
+    director: 'Gonçalo Afonso',
     production: 'One House Only',
     dop: 'Bernardo Infante',
-    videoUrl: null,
+    videoUrl: 'https://www.youtube.com/watch?v=1adIP_umouw',
   },
   'nenny': {
-    title: 'Nenny',
+    title: 'Nenny - Normal',
     description: 'Music video for Nenny',
-    director: 'André Canicos',
+    director: 'Leonor Patrocínio',
     production: 'One House Only',
-    dop: 'Bernardo Infante',
-    videoUrl: null,
+    dop: 'Pedro Patrocínio',
+    videoUrl: 'https://www.youtube.com/watch?v=Xty4iPW1rZI',
   },
   'murta-jura': {
-    title: 'Murta x Jura',
+    title: 'Murta, JÜRA - INVISÍVEL',
     description: 'Music video for Murta x Jura',
-    director: 'André Canicos',
+    director: 'Leonor Patrocínio',
     production: 'One House Only',
-    dop: 'Bernardo Infante',
-    videoUrl: null,
-  },
-  'logo-photo': {
-    title: 'Logo Photo',
-    description: 'Photography work',
-    director: 'André Canicos',
-    production: 'One House Only',
-    dop: 'Bernardo Infante',
-    videoUrl: null,
+    dop: 'Pedro Patrocínio',
+    videoUrl: 'https://www.youtube.com/watch?v=Xty4iPW1rZI',
   },
   'hodierno': {
     title: 'Hodierno',
-    description: 'Music video for Hodierno',
-    director: 'André Canicos',
-    production: 'One House Only',
-    dop: 'Bernardo Infante',
-    videoUrl: null,
+    description: 'Short Film for Hodierno',
+    director: 'Gonçalo Fonseca',
+    production: '',
+    dop: 'Matheus Kakeya Goulart',
+    videoUrl: '',
   },
   'capital-bulgaria': {
-    title: 'Capital Bulgaria',
+    title: 'Capital da Bulgária - Família',
     description: 'Music video for Capital Bulgaria',
     director: 'André Canicos',
     production: 'One House Only',
     dop: 'Bernardo Infante',
-    videoUrl: null,
+    videoUrl: 'https://www.youtube.com/watch?v=50X9v3bomC4&list=RDEMqtau8NR8bAl4PzPNzNcNGg&start_radio=1',
   },
   'blaya': {
-    title: 'Blaya',
+    title: 'BLAYA - Quero Saber',
     description: 'Music video for Blaya',
-    director: 'André Canicos',
-    production: 'One House Only',
-    dop: 'Bernardo Infante',
-    videoUrl: null,
+    director: 'Andreia Pereira Silva and João Afonso Vaz',
+    production: 'Maus da Fita',
+    dop: 'Duarte Felgueiras and Filipe Malveiro',
+    videoUrl: 'https://www.youtube.com/watch?v=GZvdvVrEhbs',
   },
   '7777angels': {
-    title: '7777 Angels',
+    title: '7777 の天使 - All Ends With Nothing',
     description: 'Music video for 7777 Angels',
-    director: 'André Canicos',
-    production: 'One House Only',
-    dop: 'Bernardo Infante',
-    videoUrl: null,
+    director: 'Inês Baptista and João Marques',
+    production: '',
+    dop: '',
+    videoUrl: 'https://www.youtube.com/watch?v=5rKAEceBmPk',
   },
 }
 
@@ -335,7 +327,7 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
       <div className="fixed top-0 right-0 h-full flex flex-col items-end justify-center pr-16 z-30">
         <div className="text-right space-y-4 animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
           <Link 
-            href="/work" 
+            href="/portfolio" 
             className="text-4xl font-light block text-white transition-all duration-300 relative group"
           >
             <span className="relative">
@@ -378,14 +370,14 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
               className="object-cover rounded-lg transition-transform duration-700 ease-out hover:scale-105" 
               priority 
             />
-            <div className="absolute inset-0 flex items-center justify-center">
+          <div className="absolute inset-0 flex items-center justify-center">
               <div className="glass-effect rounded-full p-4 backdrop-blur-md">
                 <svg width="80" height="80" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg" className="opacity-90">
                   <circle cx="60" cy="60" r="60" fill="rgba(0,0,0,0.3)" />
-                  <polygon points="50,40 90,60 50,80" fill="#fff" />
-                </svg>
-              </div>
-            </div>
+              <polygon points="50,40 90,60 50,80" fill="#fff" />
+            </svg>
+          </div>
+        </div>
           </div>
         ) : null}
 
@@ -412,7 +404,7 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
         {images.length > 1 && (
           <div className="w-full max-w-7xl mx-auto mb-16 animate-fade-in-up" style={{ animationDelay: '0.8s' }}>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
-              {images.slice(1).map((img, i) => (
+          {images.slice(1).map((img, i) => (
                 <div key={i} className="relative aspect-video overflow-hidden rounded-lg group">
                   <Image 
                     src={img} 
@@ -439,17 +431,12 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
         </div>
       </div>
 
-      {/* Footer */}
-      <footer className="relative z-10 text-center py-16 px-8">
-        <div className="max-w-4xl mx-auto">
-          <p className="text-gray-400 text-lg mb-4">
-            Freelance Colorist • Lisbon, Portugal
-          </p>
-          <p className="text-gray-500 text-sm">
-            © 2025 Tomás Mateus. All rights reserved.
-          </p>
-        </div>
-      </footer>
+        {/* Footer */}
+      <footer className="fixed bottom-0 left-0 w-full text-center z-40 bg-black">
+        <p className="text-white text-[20px] font-[Manrope] m-0 p-2">
+          © 2025 Tomás Mateus. All rights reserved
+        </p>
+        </footer>
     </div>
   )
 } 
