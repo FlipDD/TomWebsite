@@ -1,6 +1,8 @@
+'use client'
 import Image from 'next/image'
 import Link from 'next/link'
 import path from 'path'
+import { useState } from 'react'
 
 const projectFolders: { [key: string]: string } = {
   'ana-moura': 'ANA MOURA',
@@ -283,6 +285,18 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
   const project = projects[params.slug]
   const images = getProjectImages(params.slug)
 
+  // Carousel state
+  const [carouselOpen, setCarouselOpen] = useState(false)
+  const [carouselIndex, setCarouselIndex] = useState(0)
+
+  const openCarousel = (idx: number) => {
+    setCarouselIndex(idx)
+    setCarouselOpen(true)
+  }
+  const closeCarousel = () => setCarouselOpen(false)
+  const prevImage = () => setCarouselIndex((i) => (i - 1 + images.length) % images.length)
+  const nextImage = () => setCarouselIndex((i) => (i + 1) % images.length)
+
   if (!project) {
     return (
       <div className="relative min-h-screen bg-black text-white flex items-center justify-center overflow-hidden">
@@ -304,6 +318,52 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
 
   return (
     <div className="relative min-h-screen bg-black text-white overflow-hidden">
+      {/* Carousel Modal */}
+      {carouselOpen && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/90 animate-fade-in-up">
+          <button
+            className="absolute top-8 right-8 text-white text-4xl font-light hover:scale-110 transition-transform z-50"
+            onClick={closeCarousel}
+            aria-label="Close carousel"
+          >
+            &times;
+          </button>
+          <button
+            className="absolute left-4 md:left-16 top-1/2 -translate-y-1/2 text-white text-5xl font-light hover:scale-125 transition-transform z-50"
+            onClick={prevImage}
+            aria-label="Previous image"
+          >
+            &#8592;
+          </button>
+          <div className="relative w-[90vw] max-w-4xl aspect-video flex items-center justify-center">
+            <Image
+              src={images[carouselIndex]}
+              alt={project.title + ' still ' + (carouselIndex + 1)}
+              fill
+              className="object-contain rounded-lg shadow-2xl"
+              priority
+            />
+          </div>
+          <button
+            className="absolute right-4 md:right-16 top-1/2 -translate-y-1/2 text-white text-5xl font-light hover:scale-125 transition-transform z-50"
+            onClick={nextImage}
+            aria-label="Next image"
+          >
+            &#8594;
+          </button>
+          {/* Dots */}
+          <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex space-x-2 z-50">
+            {images.map((_, idx) => (
+              <button
+                key={idx}
+                className={`w-3 h-3 rounded-full border border-white ${carouselIndex === idx ? 'bg-white' : 'bg-transparent'}`}
+                onClick={() => setCarouselIndex(idx)}
+                aria-label={`Go to image ${idx + 1}`}
+              />
+            ))}
+          </div>
+        </div>
+      )}
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-5">
         <div className="absolute inset-0 bg-gradient-to-br from-white/10 to-transparent"></div>
@@ -367,17 +427,18 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
               src={images[0]} 
               alt={project.title} 
               fill 
-              className="object-cover rounded-lg transition-transform duration-700 ease-out hover:scale-105" 
+              className="object-cover rounded-lg transition-transform duration-700 ease-out hover:scale-105 cursor-pointer" 
               priority 
+              onClick={() => openCarousel(0)}
             />
-          <div className="absolute inset-0 flex items-center justify-center">
+            <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
               <div className="glass-effect rounded-full p-4 backdrop-blur-md">
                 <svg width="80" height="80" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg" className="opacity-90">
                   <circle cx="60" cy="60" r="60" fill="rgba(0,0,0,0.3)" />
-              <polygon points="50,40 90,60 50,80" fill="#fff" />
-            </svg>
-          </div>
-        </div>
+                  <polygon points="50,40 90,60 50,80" fill="#fff" />
+                </svg>
+              </div>
+            </div>
           </div>
         ) : null}
 
@@ -404,11 +465,11 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
         {images.length > 1 && (
           <div className="w-full max-w-7xl mx-auto mb-16 animate-fade-in-up" style={{ animationDelay: '0.8s' }}>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
-          {images.slice(1).map((img, i) => (
-                <div key={i} className="relative aspect-video overflow-hidden rounded-lg group">
+              {images.slice(1).map((img, i) => (
+                <div key={i} className="relative aspect-video overflow-hidden rounded-lg group cursor-pointer" onClick={() => openCarousel(i + 1)}>
                   <Image 
                     src={img} 
-                    alt={project.title + ' still ' + (i+1)} 
+                    alt={project.title + ' still ' + (i+2)} 
                     fill 
                     className="object-cover transition-transform duration-700 ease-out group-hover:scale-105" 
                   />
@@ -431,12 +492,12 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
         </div>
       </div>
 
-        {/* Footer */}
+      {/* Footer */}
       <footer className="fixed bottom-0 left-0 w-full text-center z-40 bg-black">
         <p className="text-white text-[20px] font-[Manrope] m-0 p-2">
           © 2025 Tomás Mateus. All rights reserved
         </p>
-        </footer>
+      </footer>
     </div>
   )
 } 
