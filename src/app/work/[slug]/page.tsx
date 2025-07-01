@@ -340,7 +340,7 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
               src={images[carouselIndex]}
               alt={project.title + ' still ' + (carouselIndex + 1)}
               fill
-              className="object-contain rounded-lg shadow-2xl"
+              className="object-contain shadow-2xl"
               priority
             />
           </div>
@@ -408,14 +408,14 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
       </div>
 
       {/* Main Content */}
-      <div className="relative z-10 flex flex-col items-center justify-center min-h-screen pt-32 pb-16 px-4 md:px-8">
+      <div className="relative z-10 flex flex-col items-center justify-center min-h-screen pt-32 pb-16">
         {/* Main Video/Image with Play Button */}
         {project.videoUrl ? (
           <div className="relative w-full max-w-4xl aspect-video mx-auto mb-16 animate-fade-in-up" style={{ animationDelay: '0.4s' }}>
             <iframe
               src={project.videoUrl.replace('watch?v=', 'embed/')}
               title={project.title}
-              className="w-full h-full rounded-lg"
+              className="w-full h-full"
               frameBorder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen
@@ -427,12 +427,12 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
               src={images[0]} 
               alt={project.title} 
               fill 
-              className="object-cover rounded-lg transition-transform duration-700 ease-out hover:scale-105 cursor-pointer" 
+              className="object-cover transition-transform duration-700 ease-out hover:scale-105 cursor-pointer"
               priority 
               onClick={() => openCarousel(0)}
             />
             <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-              <div className="glass-effect rounded-full p-4 backdrop-blur-md">
+              <div className="glass-effect p-4 backdrop-blur-md">
                 <svg width="80" height="80" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg" className="opacity-90">
                   <circle cx="60" cy="60" r="60" fill="rgba(0,0,0,0.3)" />
                   <polygon points="50,40 90,60 50,80" fill="#fff" />
@@ -444,29 +444,26 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
 
         {/* Title & Credits */}
         <div className="text-center mb-16 max-w-4xl mx-auto animate-fade-in-up" style={{ animationDelay: '0.6s' }}>
-          <h1 className="text-5xl md:text-7xl font-light mb-8 text-gradient">{project.title}</h1>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-lg md:text-xl">
-            <div className="space-y-2">
-              <h3 className="text-sm uppercase tracking-wider text-gray-400 font-medium">Director</h3>
-              <p className="text-white">{project.director}</p>
-            </div>
-            <div className="space-y-2">
-              <h3 className="text-sm uppercase tracking-wider text-gray-400 font-medium">Production</h3>
-              <p className="text-white">{project.production}</p>
-            </div>
-            <div className="space-y-2">
-              <h3 className="text-sm uppercase tracking-wider text-gray-400 font-medium">Director of Photography</h3>
-              <p className="text-white">{project.dop}</p>
-            </div>
+          <h1 className="text-4xl md:text-5xl font-light mb-8 text-white">{project.title}</h1>
+          <div className="space-y-2 text-lg md:text-2xl font-normal text-white">
+            {project.director && (
+              <div>Director {project.director}</div>
+            )}
+            {project.production && (
+              <div>Production {project.production}</div>
+            )}
+            {project.dop && (
+              <div>Director of Photography {project.dop}</div>
+            )}
           </div>
         </div>
 
         {/* Image Grid */}
         {images.length > 1 && (
-          <div className="w-full max-w-7xl mx-auto mb-16 animate-fade-in-up" style={{ animationDelay: '0.8s' }}>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
+          <div className="w-screen mb-16 animate-fade-in-up overflow-x-hidden" style={{ animationDelay: '0.8s' }}>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-0 w-screen">
               {images.slice(1).map((img, i) => (
-                <div key={i} className="relative aspect-video overflow-hidden rounded-lg group cursor-pointer" onClick={() => openCarousel(i + 1)}>
+                <div key={i} className="relative w-full aspect-video overflow-hidden group cursor-pointer" onClick={() => openCarousel(i + 1)}>
                   <Image 
                     src={img} 
                     alt={project.title + ' still ' + (i+2)} 
@@ -479,17 +476,6 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
             </div>
           </div>
         )}
-
-        {/* Back to Work Link */}
-        <div className="text-center animate-fade-in-up" style={{ animationDelay: '1s' }}>
-          <Link 
-            href="/work" 
-            className="inline-flex items-center space-x-2 text-gray-400 hover:text-white transition-colors duration-300 text-lg group"
-          >
-            <span>←</span>
-            <span className="group-hover:underline">Back to Work</span>
-          </Link>
-        </div>
       </div>
 
       {/* Footer */}
