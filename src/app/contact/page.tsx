@@ -28,7 +28,8 @@ export default function Contact() {
         <div className="text-right space-y-4 animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
           <Link 
             href="/portfolio" 
-            className="text-4xl font-light block hover:text-white transition-all duration-300 relative group"
+            className="block transition-all duration-300 relative group"
+            style={{ color: '#FFF', fontFamily: 'Manrope', fontSize: '50px', fontWeight: 800, lineHeight: 'normal' }}
           >
             <span className="relative">
               WORK
@@ -37,7 +38,8 @@ export default function Contact() {
           </Link>
           <Link 
             href="/contact" 
-            className="text-3xl font-light block hover:text-white transition-all duration-300 relative group"
+            className="block transition-all duration-300 relative group"
+            style={{ color: '#FFF', fontFamily: 'Manrope', fontSize: '50px', fontWeight: 800, lineHeight: 'normal' }}
           >
             <span className="relative">
               CONTACT

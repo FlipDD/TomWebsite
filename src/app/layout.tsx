@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Manrope } from "next/font/google";
 import "./globals.css";
 
-const inter = Inter({ subsets: ["latin"] });
+const manrope = Manrope({ subsets: ["latin"], weight: ["400", "700", "800"] });
 
 export const metadata: Metadata = {
   title: "Tomás Mateus - Colorist Portfolio",
@@ -23,7 +23,13 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className="scroll-smooth">
-      <body className={`${inter.className} antialiased`}>
+      <head>
+        <link
+          href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700;800&display=swap"
+          rel="stylesheet"
+        />
+      </head>
+      <body className={`${manrope.className} antialiased`}>
           {children}
       </body>
     </html>

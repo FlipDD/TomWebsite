@@ -83,8 +83,8 @@ export default function PortfolioGrid() {
           >
             <Link
               href="/portfolio"
-              className="text-4xl font-extrabold font-[Manrope] text-white block transition-all duration-200 focus:outline-none relative group"
-              style={{ letterSpacing: 1 }}
+              className="block transition-all duration-200 focus:outline-none relative group"
+              style={{ color: '#FFF', fontFamily: 'Manrope', fontSize: '50px', fontWeight: 800, lineHeight: 'normal' }}
             >
               <span className="relative">
                 WORK
@@ -104,8 +104,8 @@ export default function PortfolioGrid() {
           {/* CONTACT button */}
           <Link
             href="/contact"
-            className="text-3xl font-extrabold font-[Manrope] text-white block transition-all duration-200 mt-8 relative group"
-            style={{ letterSpacing: 1 }}
+            className="block transition-all duration-200 mt-8 relative group"
+            style={{ color: '#FFF', fontFamily: 'Manrope', fontSize: '50px', fontWeight: 800, lineHeight: 'normal' }}
           >
             <span className="relative">
               CONTACT

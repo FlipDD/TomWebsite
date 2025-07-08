@@ -320,43 +320,82 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
     <div className="relative min-h-screen bg-black text-white overflow-hidden">
       {/* Carousel Modal */}
       {carouselOpen && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/90 animate-fade-in-up">
+        <div className="fixed inset-0 z-50 flex flex-col items-center justify-center bg-black animate-fade-in-up">
           <button
-            className="absolute top-8 right-8 text-white text-4xl font-light hover:scale-110 transition-transform z-50"
+            className="absolute top-8 right-8 text-white text-3xl font-light opacity-70 hover:opacity-100 hover:scale-110 transition-all z-50"
             onClick={closeCarousel}
             aria-label="Close carousel"
           >
             &times;
           </button>
-          <button
-            className="absolute left-4 md:left-16 top-1/2 -translate-y-1/2 text-white text-5xl font-light hover:scale-125 transition-transform z-50"
-            onClick={prevImage}
-            aria-label="Previous image"
-          >
-            &#8592;
-          </button>
-          <div className="relative w-[90vw] max-w-4xl aspect-video flex items-center justify-center">
-            <Image
-              src={images[carouselIndex]}
-              alt={project.title + ' still ' + (carouselIndex + 1)}
-              fill
-              className="object-contain shadow-2xl"
-              priority
-            />
+          <div className="relative flex items-center justify-center w-full h-full" style={{ minHeight: '60vh' }}>
+            {/* Previous Image Preview */}
+            {images.length > 1 && (
+              <div
+                className="absolute left-0 top-1/2 -translate-y-1/2 flex items-center justify-center cursor-pointer opacity-60 hover:opacity-90 transition-opacity z-40"
+                style={{ width: '12vw', height: '60%', maxWidth: '200px', minWidth: '100px' }}
+                onClick={prevImage}
+              >
+                <div className="relative w-full h-full">
+                  <Image
+                    src={images[(carouselIndex - 1 + images.length) % images.length]}
+                    alt="Previous preview"
+                    fill
+                    className="object-cover rounded-none"
+                    style={{ filter: 'blur(1px) brightness(0.7)' }}
+                  />
+                </div>
+              </div>
+            )}
+            {/* Main Image */}
+            <div className="bg-black p-2 md:p-6 rounded-none shadow-2xl flex items-center justify-center" style={{ maxWidth: '95vw', maxHeight: '90vh' }}>
+              <div className="relative w-[90vw] h-[60vw] max-w-[1507px] max-h-[80vh] flex items-center justify-center">
+                <Image
+                  src={images[carouselIndex]}
+                  alt={project.title + ' still ' + (carouselIndex + 1)}
+                  fill
+                  className="object-contain shadow-xl"
+                  priority
+                />
+              </div>
+            </div>
+            {/* Next Image Preview */}
+            {images.length > 1 && (
+              <div
+                className="absolute right-0 top-1/2 -translate-y-1/2 flex items-center justify-center cursor-pointer opacity-60 hover:opacity-90 transition-opacity z-40"
+                style={{ width: '12vw', height: '60%', maxWidth: '200px', minWidth: '100px' }}
+                onClick={nextImage}
+              >
+                <div className="relative w-full h-full">
+                  <Image
+                    src={images[(carouselIndex + 1) % images.length]}
+                    alt="Next preview"
+                    fill
+                    className="object-cover rounded-none"
+                    style={{ filter: 'blur(1px) brightness(0.7)' }}
+                  />
+                </div>
+              </div>
+            )}
           </div>
-          <button
-            className="absolute right-4 md:right-16 top-1/2 -translate-y-1/2 text-white text-5xl font-light hover:scale-125 transition-transform z-50"
-            onClick={nextImage}
-            aria-label="Next image"
-          >
-            &#8594;
-          </button>
           {/* Dots */}
-          <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex space-x-2 z-50">
+          <div className="relative flex justify-center items-center mt-6 mb-2 z-50" style={{ width: `${images.length * 16 - 4}px`, height: '12px' }}>
             {images.map((_, idx) => (
               <button
                 key={idx}
-                className={`w-3 h-3 rounded-full border border-white ${carouselIndex === idx ? 'bg-white' : 'bg-transparent'}`}
+                className="absolute rounded-full"
+                style={{
+                  width: '12px',
+                  height: '12px',
+                  left: `${idx * 16.36}px`,
+                  background: '#D9D9D9',
+                  opacity: carouselIndex === idx ? 1 : 0.41,
+                  transition: 'opacity 0.2s',
+                  border: 'none',
+                  outline: 'none',
+                  cursor: 'pointer',
+                  padding: 0,
+                }}
                 onClick={() => setCarouselIndex(idx)}
                 aria-label={`Go to image ${idx + 1}`}
               />
@@ -388,7 +427,8 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
         <div className="text-right space-y-4 animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
           <Link 
             href="/portfolio" 
-            className="text-4xl font-light block text-white transition-all duration-300 relative group"
+            className="block transition-all duration-300 relative group"
+            style={{ color: '#FFF', fontFamily: 'Manrope', fontSize: '50px', fontWeight: 800, lineHeight: 'normal' }}
           >
             <span className="relative">
               WORK
@@ -397,7 +437,8 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
           </Link>
           <Link 
             href="/contact" 
-            className="text-3xl font-light block hover:text-white transition-all duration-300 relative group"
+            className="block transition-all duration-300 relative group"
+            style={{ color: '#FFF', fontFamily: 'Manrope', fontSize: '50px', fontWeight: 800, lineHeight: 'normal' }}
           >
             <span className="relative">
               CONTACT
@@ -479,10 +520,8 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
       </div>
 
       {/* Footer */}
-      <footer className="fixed bottom-0 left-0 w-full text-center z-40 bg-black">
-        <p className="text-white text-[20px] font-[Manrope] m-0 p-2">
-          © 2025 Tomás Mateus. All rights reserved
-        </p>
+      <footer className="w-full text-center" style={{ color: 'rgba(255,255,255,0.5)', fontSize: '20px', fontFamily: 'Manrope', fontWeight: 400, height: '35px', lineHeight: '35px', background: 'none' }}>
+        © 2025 Tomás Mateus. All rights reserved
       </footer>
     </div>
   )
