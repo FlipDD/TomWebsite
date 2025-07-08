@@ -435,7 +435,7 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
           >
             <span className="relative">
               WORK
-              <span className="absolute -bottom-1 left-0 w-full h-0.5 bg-white"></span>
+              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-white transition-all duration-300 group-hover:w-full"></span>
             </span>
           </Link>
           <Link 
@@ -488,9 +488,43 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
         ) : null}
 
         {/* Title & Credits */}
-        <div className="text-center mb-16 max-w-4xl mx-auto animate-fade-in-up" style={{ animationDelay: '0.6s' }}>
-          <h1 className="text-4xl md:text-5xl font-light mb-8 text-white">{project.title}</h1>
-          <div className="space-y-2 text-lg md:text-2xl font-normal text-white">
+        <div className="text-center mb-16 mx-auto animate-fade-in-up" style={{ animationDelay: '0.6s' }}>
+          <h1
+            style={{
+              width: '1343.3px',
+              height: '28px',
+              flexShrink: 0,
+              color: '#FFF',
+              textAlign: 'center',
+              fontFamily: 'Manrope',
+              fontSize: '28px',
+              fontStyle: 'normal',
+              fontWeight: 500,
+              lineHeight: 'normal',
+              margin: '0 auto 65px auto',
+            }}
+          >
+            {project.title}
+          </h1>
+          <div
+            style={{
+              width: '1343.3px',
+              height: '77px',
+              flexShrink: 0,
+              color: '#FFF',
+              textAlign: 'center',
+              fontFamily: 'Manrope',
+              fontSize: '21px',
+              fontStyle: 'normal',
+              fontWeight: 400,
+              lineHeight: 'normal',
+              margin: '0 auto',
+              display: 'flex',
+              flexDirection: 'column',
+              justifyContent: 'center',
+              alignItems: 'center',
+            }}
+          >
             {project.director && (
               <div>Director {project.director}</div>
             )}
