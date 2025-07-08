@@ -66,9 +66,9 @@ export default function PortfolioGrid() {
   return (
     <div className="relative min-h-screen bg-black overflow-hidden">
       {/* Logo */}
-      <div className="absolute top-8 left-8 z-20">
+      <div className="absolute top-2 left-2 z-20">
         <Link href="/">
-          <Image src="/logo/logowhite.png" alt="Tomás Mateus Logo" width={220} height={60} />
+          <Image src="/logo/logowhite.png" alt="Tomás Mateus Logo" width={330} height={90} />
         </Link>
       </div>
 
@@ -84,7 +84,7 @@ export default function PortfolioGrid() {
             <Link
               href="/portfolio"
               className="block transition-all duration-200 focus:outline-none relative group"
-              style={{ color: '#FFF', fontFamily: 'Manrope', fontSize: '50px', fontWeight: 800, lineHeight: 'normal' }}
+              style={{ color: '#FFF', fontFamily: 'Manrope', fontSize: '33px', fontWeight: 800, lineHeight: 'normal' }}
             >
               <span className="relative">
                 WORK
@@ -105,7 +105,7 @@ export default function PortfolioGrid() {
           <Link
             href="/contact"
             className="block transition-all duration-200 mt-8 relative group"
-            style={{ color: '#FFF', fontFamily: 'Manrope', fontSize: '50px', fontWeight: 800, lineHeight: 'normal' }}
+            style={{ color: '#FFF', fontFamily: 'Manrope', fontSize: '33px', fontWeight: 800, lineHeight: 'normal' }}
           >
             <span className="relative">
               CONTACT

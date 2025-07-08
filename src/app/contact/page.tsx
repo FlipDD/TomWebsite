@@ -11,13 +11,13 @@ export default function Contact() {
       </div>
 
       {/* Logo */}
-      <div className="fixed top-8 left-8 z-30 animate-fade-in">
+      <div className="fixed top-2 left-2 z-30 animate-fade-in">
         <Link href="/">
           <Image 
             src="/logo/logowhite.png" 
             alt="Tomás Mateus Logo" 
-            width={220} 
-            height={60}
+            width={330} 
+            height={90}
             className="hover:opacity-80 transition-opacity duration-300"
           />
         </Link>
@@ -29,7 +29,7 @@ export default function Contact() {
           <Link 
             href="/portfolio" 
             className="block transition-all duration-300 relative group"
-            style={{ color: '#FFF', fontFamily: 'Manrope', fontSize: '50px', fontWeight: 800, lineHeight: 'normal' }}
+            style={{ color: '#FFF', fontFamily: 'Manrope', fontSize: '33px', fontWeight: 800, lineHeight: 'normal' }}
           >
             <span className="relative">
               WORK
@@ -39,7 +39,7 @@ export default function Contact() {
           <Link 
             href="/contact" 
             className="block transition-all duration-300 relative group"
-            style={{ color: '#FFF', fontFamily: 'Manrope', fontSize: '50px', fontWeight: 800, lineHeight: 'normal' }}
+            style={{ color: '#FFF', fontFamily: 'Manrope', fontSize: '33px', fontWeight: 800, lineHeight: 'normal' }}
           >
             <span className="relative">
               CONTACT

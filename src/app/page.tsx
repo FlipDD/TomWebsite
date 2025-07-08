@@ -78,8 +78,8 @@ export default function Home() {
       </div>
 
       {/* Logo */}
-      <div className="absolute top-8 left-8 z-20">
-        <Image src="/logo/logowhite.png" alt="Tomás Mateus Logo" width={220} height={60} />
+      <div className="absolute top-2 left-2 z-20">
+        <Image src="/logo/logowhite.png" alt="Tomás Mateus Logo" width={330} height={90} />
       </div>
 
       {/* Sidebar Navigation */}
@@ -94,7 +94,7 @@ export default function Home() {
             <Link
               href="/portfolio"
               className="block transition-all duration-200 focus:outline-none relative group"
-              style={{ color: '#FFF', fontFamily: 'Manrope', fontSize: '50px', fontWeight: 800, lineHeight: 'normal' }}
+              style={{ color: '#FFF', fontFamily: 'Manrope', fontSize: '33px', fontWeight: 800, lineHeight: 'normal' }}
             >
               <span className="relative">
                 WORK
@@ -115,7 +115,7 @@ export default function Home() {
           <Link
             href="/contact"
             className="block transition-all duration-200 mt-8 relative group"
-            style={{ color: '#FFF', fontFamily: 'Manrope', fontSize: '50px', fontWeight: 800, lineHeight: 'normal' }}
+            style={{ color: '#FFF', fontFamily: 'Manrope', fontSize: '33px', fontWeight: 800, lineHeight: 'normal' }}
           >
             <span className="relative">
               CONTACT
@@ -126,7 +126,7 @@ export default function Home() {
       </div>
 
       {/* Footer */}
-      <footer className="fixed bottom-0 left-0 w-full text-center z-40 bg-black">
+      <footer className="fixed bottom-0 left-0 w-full text-center z-40">
         <p className="text-white text-[20px] font-[Manrope] m-0 p-2">
           © 2025 Tomás Mateus. All rights reserved
         </p>
