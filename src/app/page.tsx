@@ -72,7 +72,7 @@ export default function Home() {
           src="/ANA MOURA/Screenshot 2025-03-04 at 16.07.13.png"
           alt="Landing Background"
           fill
-          className="object-cover w-full h-full"
+          className="object-cover w-full h-full object-top"
           priority
         />
       </div>
@@ -84,7 +84,7 @@ export default function Home() {
 
       {/* Sidebar Navigation */}
       <div className="fixed top-0 right-0 h-full flex flex-col items-end justify-center pr-16 z-30 select-none">
-        <div className="text-right space-y-4">
+        <div className="text-right space-y-1">
           {/* WORK button with hover */}
           <div
             className="relative group"

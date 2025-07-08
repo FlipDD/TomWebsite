@@ -25,7 +25,7 @@ export default function Contact() {
 
       {/* Sidebar Navigation */}
       <div className="fixed top-0 right-0 h-full flex flex-col items-end justify-center pr-16 z-30">
-        <div className="text-right space-y-4 animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
+        <div className="text-right space-y-1 animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
           <Link 
             href="/portfolio" 
             className="block transition-all duration-300 relative group"
@@ -50,59 +50,71 @@ export default function Contact() {
       </div>
 
       {/* Main Content */}
-      <div className="relative z-10 flex flex-col lg:flex-row items-center justify-center min-h-screen pt-32 pb-16 px-4 sm:px-8">
+      <div className="relative z-10 flex flex-col lg:flex-row items-center justify-center min-h-screen pt-16 pb-16 px-4 sm:px-8">
         {/* Images glued to the left or top on mobile */}
-        <div className="flex flex-col justify-center items-start min-w-[320px] max-w-[480px] w-full lg:w-[480px] mb-8 lg:mb-0 lg:mr-4">
-          <div className="relative w-full lg:w-[480px] max-w-full aspect-[4/5] mb-0 overflow-hidden rounded-lg">
-            <Image 
-              src="/portfolio/logo-photo.png" 
-              alt="Tomás Mateus Self Portrait" 
-              fill 
-              className="object-cover transition-transform duration-700 ease-out hover:scale-105" 
-              priority 
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300"></div>
-          </div>
-          <div className="relative w-full lg:w-[480px] max-w-full h-[80px] overflow-hidden rounded-lg mt-4">
-            <Image 
-              src="/logo/lightprofiles.png" 
-              alt="Waveform" 
-              fill 
-              className="object-cover object-bottom transition-transform duration-700 ease-out hover:scale-105" 
-            />
-          </div>
+        <div className="flex flex-col justify-center items-start min-w-[373px] max-w-[560px] w-full lg:w-[560px] mb-8 lg:mb-0 lg:mr-4">
+          <div
+            style={{
+              width: '609.139px',
+              height: '603.36px',
+              flexShrink: 0,
+              aspectRatio: '676.82 / 670.40',
+              background: 'url("/portfolio/logo-photo.png") lightgray 50% / cover no-repeat',
+              borderRadius: 0,
+            }}
+            aria-label="Tomás Mateus Self Portrait"
+          />
+          <div
+            style={{
+              width: '609.139px',
+              height: '152.573px',
+              flexShrink: 0,
+              aspectRatio: '676.82 / 169.53',
+              background: 'url("/logo/lightprofiles.png") lightgray 50% / cover no-repeat',
+              borderRadius: 0,
+              marginTop: '16px',
+            }}
+            aria-label="Waveform"
+          />
         </div>
         {/* About and Contact Info centered */}
-        <div className="flex-1 flex flex-col justify-center items-start px-2 sm:px-8 max-w-2xl animate-fade-in-up mx-auto" style={{ animationDelay: '0.6s' }}>
-          <h1 className="text-5xl md:text-6xl font-light mb-8 text-gradient">
-            About
-          </h1>
-          <div className="space-y-6 text-lg md:text-xl leading-relaxed text-gray-300">
-            <p>
-              My name is <span className="text-white font-medium">Tomás Mateus</span>. I'm a freelance Colorist based in Lisbon, Portugal. With a Bachelor's degree in Cinema from Lusófona University, I specialize in crafting creative looks for music videos and films, focusing on artistic and visually striking projects.
-            </p>
-            <p>
-              I love collaborating with directors and DOPs to bring their vision to life through color, whether it's bold and experimental or subtle and cinematic. I also work remotely, making it easy to team up with clients worldwide.
-            </p>
+        <div className="flex-1 flex flex-col justify-center items-start px-2 sm:px-8 max-w-2xl animate-fade-in-up mx-auto -mt-8" style={{ animationDelay: '0.6s' }}>
+          <div
+            style={{
+              width: '603.2px',
+              height: '360.8px',
+              flexShrink: 0,
+              color: '#FFF',
+              fontFamily: 'Manrope',
+              fontSize: '24px',
+              fontStyle: 'normal',
+              fontWeight: 300,
+              lineHeight: 'normal',
+            }}
+          >
+            My name is Tomás Mateus I’m a freelance Colorist based in Lisbon, Portugal, with a Bachelor’s degree 
+            in Cinema from Lusófona University.<br/><br/>
+            My work as a colorist includes collaborations with 
+            some of the most prominent names in the 
+            portuguese music scene. <br/><br/>
+            Recently, thanks to my experience in the industry, taking on the role of director for a few music videos 
+            has also come naturally.
           </div>
           <div className="mt-12 space-y-6">
-            <h2 className="text-2xl font-light text-white mb-6">Get in Touch</h2>
-            <div className="space-y-4">
+            <div style={{ width: '511.2px', flexShrink: 0 }}>
               <a 
                 href="mailto:tomasmateus@gmail.com" 
-                className="flex items-center space-x-4 text-lg text-gray-300 hover:text-white transition-colors duration-300 group"
+                style={{ display: 'block', height: '30.4px', color: '#FFF', textDecoration: 'none', fontFamily: 'Manrope', fontSize: '24px', fontWeight: 300, fontStyle: 'normal', lineHeight: 'normal' }}
               >
-                <span className="text-2xl">✉️</span>
-                <span className="group-hover:underline">tomasmateus@gmail.com</span>
+                tomasmateus@gmail.com
               </a>
               <a 
                 href="https://instagram.com/tommmateus" 
                 target="_blank" 
                 rel="noopener noreferrer" 
-                className="flex items-center space-x-4 text-lg text-gray-300 hover:text-white transition-colors duration-300 group"
+                style={{ display: 'block', height: '30.4px', color: '#FFF', textDecoration: 'none', fontFamily: 'Manrope', fontSize: '24px', fontWeight: 300, fontStyle: 'normal', lineHeight: 'normal' }}
               >
-                <span className="text-2xl">📷</span>
-                <span className="group-hover:underline">@tommmateus</span>
+                @tommmateus
               </a>
             </div>
           </div>

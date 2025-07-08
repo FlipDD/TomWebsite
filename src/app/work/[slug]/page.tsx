@@ -343,6 +343,7 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
                     fill
                     className="object-cover rounded-none"
                     style={{ filter: 'blur(1px) brightness(0.7)' }}
+                    loading="eager"
                   />
                 </div>
               </div>
@@ -356,6 +357,7 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
                   fill
                   className="object-contain shadow-xl"
                   priority
+                  loading="eager"
                 />
               </div>
             </div>
@@ -373,6 +375,7 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
                     fill
                     className="object-cover rounded-none"
                     style={{ filter: 'blur(1px) brightness(0.7)' }}
+                    loading="eager"
                   />
                 </div>
               </div>
@@ -424,7 +427,7 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
 
       {/* Sidebar Navigation */}
       <div className="fixed top-0 right-0 h-full flex flex-col items-end justify-center pr-16 z-30">
-        <div className="text-right space-y-4 animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
+        <div className="text-right space-y-1 animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
           <Link 
             href="/portfolio" 
             className="block transition-all duration-300 relative group"
@@ -471,6 +474,7 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
               className="object-cover transition-transform duration-700 ease-out hover:scale-105 cursor-pointer"
               priority 
               onClick={() => openCarousel(0)}
+              loading="eager"
             />
             <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
               <div className="glass-effect p-4 backdrop-blur-md">
@@ -510,6 +514,7 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
                     alt={project.title + ' still ' + (i+2)} 
                     fill 
                     className="object-cover transition-transform duration-700 ease-out group-hover:scale-105" 
+                    loading="eager"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 </div>

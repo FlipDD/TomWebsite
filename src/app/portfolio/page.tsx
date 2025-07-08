@@ -74,7 +74,7 @@ export default function PortfolioGrid() {
 
       {/* Sidebar Navigation */}
       <div className="fixed top-0 right-0 h-full flex flex-col items-end justify-center pr-16 z-30 select-none">
-        <div className="text-right space-y-4">
+        <div className="text-right space-y-1">
           {/* WORK button with hover */}
           <div
             className="relative group"
