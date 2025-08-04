@@ -430,14 +430,14 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
         <div className="text-right space-y-1 animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
           <Link 
             href="/portfolio" 
-            className="block transition-all duration-300"
+            className="block transition-all duration-500 ease-out hover:scale-110"
             style={{ color: '#FFF', fontFamily: 'Manrope', fontSize: '28px', fontWeight: 650, lineHeight: 'normal' }}
           >
             WORK
           </Link>
           <Link 
             href="/contact" 
-            className="block transition-all duration-300"
+            className="block transition-all duration-500 ease-out hover:scale-110"
             style={{ color: '#FFF', fontFamily: 'Manrope', fontSize: '28px', fontWeight: 650, lineHeight: 'normal' }}
           >
             CONTACT

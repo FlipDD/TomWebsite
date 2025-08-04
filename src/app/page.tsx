@@ -86,7 +86,7 @@ export default function Home() {
           {/* WORK button */}
           <Link
             href="/portfolio"
-            className="block transition-all duration-200 focus:outline-none"
+            className="block transition-all duration-500 ease-out focus:outline-none hover:scale-110"
             style={{ color: '#FFF', fontFamily: 'Manrope', fontSize: '28px', fontWeight: 650, lineHeight: 'normal' }}
           >
             WORK
@@ -94,7 +94,7 @@ export default function Home() {
           {/* CONTACT button */}
           <Link
             href="/contact"
-            className="block transition-all duration-200 mt-8"
+            className="block transition-all duration-500 ease-out mt-8 hover:scale-110"
             style={{ color: '#FFF', fontFamily: 'Manrope', fontSize: '28px', fontWeight: 650, lineHeight: 'normal' }}
           >
             CONTACT
