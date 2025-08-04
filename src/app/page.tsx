@@ -76,7 +76,7 @@ export default function Home() {
       </div>
 
       {/* Logo */}
-      <div className="absolute top-9 left-9 z-20">
+      <div className="absolute top-9 left-9 z-20 mix-blend-difference">
         <Image src="/logo/logowhite.png" alt="Tomás Mateus Logo" width={330} height={90} />
       </div>
 

@@ -11,7 +11,7 @@ export default function Contact() {
       </div>
 
       {/* Logo */}
-      <div className="fixed top-9 left-9 z-30 animate-fade-in">
+      <div className="fixed top-9 left-9 z-30 animate-fade-in mix-blend-difference">
         <Link href="/">
           <Image 
             src="/logo/logowhite.png" 
