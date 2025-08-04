@@ -60,7 +60,7 @@ export default function PortfolioGrid() {
   return (
     <div className="relative min-h-screen bg-black">
       {/* Logo */}
-      <div className="absolute top-2 left-2 z-20">
+      <div className="fixed top-2 left-2 z-50">
         <Link href="/">
           <Image src="/logo/logowhite.png" alt="Tomás Mateus Logo" width={330} height={90} />
         </Link>
@@ -95,7 +95,7 @@ export default function PortfolioGrid() {
       </div>
 
       {/* Portfolio Grid */}
-      <main className="flex-1 flex items-center justify-center pt-20 pb-20">
+      <main className="flex-1 flex items-center justify-center">
         <div className="w-full grid grid-cols-3 gap-0">
           {projects.map((project, i) => (
             <Link key={i} href={`/work/${project.slug}`} className="relative w-full aspect-[16/9] group">
