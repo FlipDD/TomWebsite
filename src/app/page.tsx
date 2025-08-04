@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -62,8 +62,6 @@ const portfolioItems = [
 ];
 
 export default function Home() {
-  const [workHover, setWorkHover] = useState(false);
-
   return (
     <div className="relative min-h-screen w-full flex flex-col justify-between" style={{ minHeight: '100vh' }}>
       {/* Background Image */}
@@ -85,32 +83,17 @@ export default function Home() {
       {/* Sidebar Navigation */}
       <div className="fixed top-0 right-0 h-full flex flex-col items-end justify-center pr-16 z-30 select-none">
         <div className="text-right space-y-1">
-          {/* WORK button with hover */}
-          <div
-            className="relative group"
-            onMouseEnter={() => setWorkHover(true)}
-            onMouseLeave={() => setWorkHover(false)}
+          {/* WORK button */}
+          <Link
+            href="/portfolio"
+            className="block transition-all duration-200 focus:outline-none relative group"
+            style={{ color: '#FFF', fontFamily: 'Manrope', fontSize: '33px', fontWeight: 800, lineHeight: 'normal' }}
           >
-            <Link
-              href="/portfolio"
-              className="block transition-all duration-200 focus:outline-none relative group"
-              style={{ color: '#FFF', fontFamily: 'Manrope', fontSize: '33px', fontWeight: 800, lineHeight: 'normal' }}
-            >
-              <span className="relative">
-                WORK
-                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-white transition-all duration-300 group-hover:w-full"></span>
-              </span>
-            </Link>
-            {/* Sub-links appear on hover */}
-            <div
-              className={`overflow-hidden transition-all duration-300 text-white text-lg font-medium font-[Manrope] text-right pl-4 ${workHover ? 'max-h-40 opacity-100' : 'max-h-0 opacity-0'} flex flex-col space-y-1`}
-              style={{ transitionProperty: 'max-height, opacity' }}
-            >
-              <Link href="/portfolio" className="hover:underline text-2xl font-medium mt-2">all</Link>
-              <Link href="#" className="hover:underline text-2xl font-medium">music videos</Link>
-              <Link href="#" className="hover:underline text-2xl font-medium">short-film</Link>
-            </div>
-          </div>
+            <span className="relative">
+              WORK
+              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-white transition-all duration-300 group-hover:w-full"></span>
+            </span>
+          </Link>
           {/* CONTACT button */}
           <Link
             href="/contact"
