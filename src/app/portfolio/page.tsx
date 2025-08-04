@@ -78,7 +78,7 @@ export default function PortfolioGrid() {
           <Link
             href="/portfolio"
             className="block transition-all duration-500 ease-out focus:outline-none hover:scale-110"
-            style={{ color: '#FFF', fontFamily: 'Manrope', fontSize: '28px', fontWeight: 650, lineHeight: 'normal' }}
+            style={{ color: '#FFF', fontFamily: 'Manrope', fontSize: '28px', fontWeight: 650, lineHeight: 'normal', width: 'fit-content', marginLeft: 'auto' }}
           >
             WORK
           </Link>
@@ -86,7 +86,7 @@ export default function PortfolioGrid() {
           <Link
             href="/contact"
             className="block transition-all duration-500 ease-out mt-8 hover:scale-110"
-            style={{ color: '#FFF', fontFamily: 'Manrope', fontSize: '28px', fontWeight: 650, lineHeight: 'normal' }}
+            style={{ color: '#FFF', fontFamily: 'Manrope', fontSize: '28px', fontWeight: 650, lineHeight: 'normal', width: 'fit-content', marginLeft: 'auto' }}
           >
             CONTACT
           </Link>
