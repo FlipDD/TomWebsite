@@ -426,7 +426,7 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
       </div>
 
       {/* Sidebar Navigation */}
-      <div className="fixed top-0 right-0 h-full flex flex-col items-end justify-center pr-9 z-30">
+      <div className="fixed top-0 right-0 h-full flex flex-col items-end justify-center pr-9 z-30 mix-blend-difference">
         <div className="text-right space-y-1 animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
           <Link 
             href="/portfolio" 

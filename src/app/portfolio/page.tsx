@@ -72,7 +72,7 @@ export default function PortfolioGrid() {
       </div>
 
       {/* Sidebar Navigation */}
-      <div className="fixed top-0 right-0 h-full flex flex-col items-end justify-center pr-9 z-30 select-none">
+      <div className="fixed top-0 right-0 h-full flex flex-col items-end justify-center pr-9 z-30 select-none mix-blend-difference">
         <div className="text-right space-y-1">
           {/* WORK button */}
           <Link
