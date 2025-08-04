@@ -60,9 +60,14 @@ export default function PortfolioGrid() {
   return (
     <div className="relative min-h-screen bg-black">
       {/* Logo */}
-      <div className="fixed top-2 left-2 z-50">
+      <div className="fixed top-2 left-2 z-50 mix-blend-difference">
         <Link href="/">
-          <Image src="/logo/logowhite.png" alt="Tomás Mateus Logo" width={330} height={90} />
+          <Image 
+            src="/logo/logowhite.png" 
+            alt="Tomás Mateus Logo" 
+            width={330} 
+            height={90}
+          />
         </Link>
       </div>
 
