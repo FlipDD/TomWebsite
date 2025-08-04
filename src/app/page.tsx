@@ -76,12 +76,12 @@ export default function Home() {
       </div>
 
       {/* Logo */}
-      <div className="absolute top-2 left-2 z-20">
+      <div className="absolute top-9 left-9 z-20">
         <Image src="/logo/logowhite.png" alt="Tomás Mateus Logo" width={330} height={90} />
       </div>
 
       {/* Sidebar Navigation */}
-      <div className="fixed top-0 right-0 h-full flex flex-col items-end justify-center pr-16 z-30 select-none">
+      <div className="fixed top-0 right-0 h-full flex flex-col items-end justify-center pr-9 z-30 select-none">
         <div className="text-right space-y-1">
           {/* WORK button */}
           <Link

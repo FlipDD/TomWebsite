@@ -11,7 +11,7 @@ export default function Contact() {
       </div>
 
       {/* Logo */}
-      <div className="fixed top-2 left-2 z-30 animate-fade-in">
+      <div className="fixed top-9 left-9 z-30 animate-fade-in">
         <Link href="/">
           <Image 
             src="/logo/logowhite.png" 
@@ -24,7 +24,7 @@ export default function Contact() {
       </div>
 
       {/* Sidebar Navigation */}
-      <div className="fixed top-0 right-0 h-full flex flex-col items-end justify-center pr-16 z-30">
+      <div className="fixed top-0 right-0 h-full flex flex-col items-end justify-center pr-9 z-30">
         <div className="text-right space-y-1 animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
           <Link 
             href="/portfolio" 
