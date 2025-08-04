@@ -77,24 +77,18 @@ export default function PortfolioGrid() {
           {/* WORK button */}
           <Link
             href="/portfolio"
-            className="block transition-all duration-200 focus:outline-none relative group"
-            style={{ color: '#FFF', fontFamily: 'Manrope', fontSize: '33px', fontWeight: 800, lineHeight: 'normal' }}
+            className="block transition-all duration-200 focus:outline-none"
+            style={{ color: '#FFF', fontFamily: 'Manrope', fontSize: '28px', fontWeight: 650, lineHeight: 'normal' }}
           >
-            <span className="relative">
-              WORK
-              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-white transition-all duration-300 group-hover:w-full"></span>
-            </span>
+            WORK
           </Link>
           {/* CONTACT button */}
           <Link
             href="/contact"
-            className="block transition-all duration-200 mt-8 relative group"
-            style={{ color: '#FFF', fontFamily: 'Manrope', fontSize: '33px', fontWeight: 800, lineHeight: 'normal' }}
+            className="block transition-all duration-200 mt-8"
+            style={{ color: '#FFF', fontFamily: 'Manrope', fontSize: '28px', fontWeight: 650, lineHeight: 'normal' }}
           >
-            <span className="relative">
-              CONTACT
-              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-white transition-all duration-300 group-hover:w-full"></span>
-            </span>
+            CONTACT
           </Link>
         </div>
       </div>

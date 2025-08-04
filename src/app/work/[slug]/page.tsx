@@ -430,23 +430,17 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
         <div className="text-right space-y-1 animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
           <Link 
             href="/portfolio" 
-            className="block transition-all duration-300 relative group"
-            style={{ color: '#FFF', fontFamily: 'Manrope', fontSize: '33px', fontWeight: 800, lineHeight: 'normal' }}
+            className="block transition-all duration-300"
+            style={{ color: '#FFF', fontFamily: 'Manrope', fontSize: '28px', fontWeight: 650, lineHeight: 'normal' }}
           >
-            <span className="relative">
-              WORK
-              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-white transition-all duration-300 group-hover:w-full"></span>
-            </span>
+            WORK
           </Link>
           <Link 
             href="/contact" 
-            className="block transition-all duration-300 relative group"
-            style={{ color: '#FFF', fontFamily: 'Manrope', fontSize: '33px', fontWeight: 800, lineHeight: 'normal' }}
+            className="block transition-all duration-300"
+            style={{ color: '#FFF', fontFamily: 'Manrope', fontSize: '28px', fontWeight: 650, lineHeight: 'normal' }}
           >
-            <span className="relative">
-              CONTACT
-              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-white transition-all duration-300 group-hover:w-full"></span>
-            </span>
+            CONTACT
           </Link>
         </div>
       </div>
