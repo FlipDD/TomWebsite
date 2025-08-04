@@ -306,7 +306,7 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
           <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_50%_50%,rgba(255,255,255,0.1),transparent_50%)]"></div>
         </div>
         
-        <div className="relative z-10 text-center animate-fade-in-up">
+        <div className="relative z-10 text-center">
           <h1 className="text-4xl md:text-6xl font-light mb-6 text-gradient">Project not found</h1>
           <Link href="/" className="text-gray-400 hover:text-white transition-colors duration-300 text-lg">
             Return to home
@@ -320,7 +320,7 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
     <div className="relative min-h-screen bg-black text-white overflow-hidden">
       {/* Carousel Modal */}
       {carouselOpen && (
-        <div className="fixed inset-0 z-50 flex flex-col items-center justify-center bg-black animate-fade-in-up">
+        <div className="fixed inset-0 z-50 flex flex-col items-center justify-center bg-black">
           <button
             className="absolute top-8 right-8 text-white text-3xl font-light opacity-70 hover:opacity-100 hover:scale-110 transition-all z-50"
             onClick={closeCarousel}
@@ -413,7 +413,7 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
       </div>
 
       {/* Logo */}
-      <div className="fixed top-9 left-9 z-20 animate-fade-in mix-blend-difference">
+      <div className="fixed top-9 left-9 z-20 mix-blend-difference">
         <Link href="/">
           <Image 
             src="/logo/logowhite.png" 
@@ -427,7 +427,7 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
 
       {/* Sidebar Navigation */}
       <div className="fixed top-0 right-0 h-full flex flex-col items-end justify-center pr-9 z-30 mix-blend-difference">
-        <div className="text-right space-y-1 animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
+        <div className="text-right space-y-1">
           <Link 
             href="/portfolio" 
             className="block transition-all duration-500 ease-out hover:scale-110"
@@ -449,7 +449,7 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
       <div className="relative z-10 flex flex-col items-center justify-center min-h-screen pt-32 pb-16">
         {/* Main Video/Image with Play Button */}
         {project.videoUrl ? (
-          <div className="relative w-full max-w-4xl aspect-video mx-auto mb-16 animate-fade-in-up" style={{ animationDelay: '0.4s' }}>
+          <div className="relative w-full max-w-4xl aspect-video mx-auto mb-16">
             <iframe
               src={project.videoUrl.replace('watch?v=', 'embed/')}
               title={project.title}
@@ -460,7 +460,7 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
             ></iframe>
           </div>
         ) : images.length > 0 ? (
-          <div className="relative w-full max-w-4xl aspect-video mx-auto mb-16 animate-fade-in-up" style={{ animationDelay: '0.4s' }}>
+          <div className="relative w-full max-w-4xl aspect-video mx-auto mb-16">
             <Image 
               src={images[0]} 
               alt={project.title} 
@@ -482,7 +482,7 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
         ) : null}
 
         {/* Title & Credits */}
-        <div className="text-center mb-16 mx-auto animate-fade-in-up" style={{ animationDelay: '0.6s' }}>
+        <div className="text-center mb-16 mx-auto">
           <h1
             style={{
               width: '1343.3px',
@@ -533,7 +533,7 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
 
         {/* Image Grid */}
         {images.length > 1 && (
-          <div className="w-screen mb-16 animate-fade-in-up overflow-x-hidden" style={{ animationDelay: '0.8s' }}>
+          <div className="w-screen mb-16 overflow-x-hidden">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-0 w-screen">
               {images.slice(1).map((img, i) => (
                 <div key={i} className="relative w-full aspect-video overflow-hidden group cursor-pointer" onClick={() => openCarousel(i + 1)}>

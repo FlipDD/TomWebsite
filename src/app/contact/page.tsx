@@ -11,7 +11,7 @@ export default function Contact() {
       </div>
 
       {/* Logo */}
-      <div className="fixed top-9 left-9 z-30 animate-fade-in mix-blend-difference">
+                    <div className="fixed top-9 left-9 z-30 mix-blend-difference">
         <Link href="/">
           <Image 
             src="/logo/logowhite.png" 
@@ -25,7 +25,7 @@ export default function Contact() {
 
       {/* Sidebar Navigation */}
       <div className="fixed top-0 right-0 h-full flex flex-col items-end justify-center pr-9 z-30 mix-blend-difference">
-        <div className="text-right space-y-1 animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
+                        <div className="text-right space-y-1">
           <Link 
             href="/portfolio" 
             className="block transition-all duration-500 ease-out hover:scale-110"
@@ -72,7 +72,7 @@ export default function Contact() {
           />
         </div>
         {/* About and Contact Info centered */}
-        <div className="flex-1 flex flex-col justify-center items-start px-2 sm:px-8 max-w-2xl animate-fade-in-up mx-auto -mt-8" style={{ animationDelay: '0.6s' }}>
+                        <div className="flex-1 flex flex-col justify-center items-start px-2 sm:px-8 max-w-2xl mx-auto -mt-8">
           <div
             style={{
               width: '603.2px',
