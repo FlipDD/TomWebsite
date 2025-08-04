@@ -35,11 +35,6 @@ const projects = [
     slug: 'murta-jura',
   },
   {
-    title: 'Logo Photo',
-    image: '/portfolio/logo-photo.png',
-    slug: 'logo-photo',
-  },
-  {
     title: 'Hodierno',
     image: '/portfolio/hodierno.png',
     slug: 'hodierno',
@@ -63,7 +58,7 @@ const projects = [
 
 export default function PortfolioGrid() {
   return (
-    <div className="relative min-h-screen bg-black overflow-hidden">
+    <div className="relative min-h-screen bg-black">
       {/* Logo */}
       <div className="absolute top-2 left-2 z-20">
         <Link href="/">
@@ -100,10 +95,10 @@ export default function PortfolioGrid() {
       </div>
 
       {/* Portfolio Grid */}
-      <main className="flex-1 flex items-center justify-center">
-        <div className="w-full h-[100vh] max-h-screen grid grid-cols-3 gap-0">
+      <main className="flex-1 flex items-center justify-center pt-20 pb-20">
+        <div className="w-full grid grid-cols-3 gap-0">
           {projects.map((project, i) => (
-            <Link key={i} href={`/work/${project.slug}`} className="relative w-full h-full aspect-[16/9] group">
+            <Link key={i} href={`/work/${project.slug}`} className="relative w-full aspect-[16/9] group">
               <Image
                 src={project.image}
                 alt={project.title}
