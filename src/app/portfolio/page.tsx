@@ -117,12 +117,12 @@ export default function PortfolioGrid() {
         </div>
       </main>
 
-      {/* Footer */}
-      <footer className="fixed bottom-0 left-0 w-full text-center z-40 bg-black">
-        <p className="text-white text-[20px] font-[Manrope] m-0 p-2">
-          © 2025 Tomás Mateus. All rights reserved
-        </p>
-      </footer>
+                   {/* Footer */}
+             <footer className="fixed bottom-0 left-0 w-full text-center z-40">
+               <p className="text-white text-[20px] font-[Manrope] m-0 p-2">
+                 © 2025 Tomás Mateus. All rights reserved
+               </p>
+             </footer>
     </div>
   );
 } 

@@ -301,9 +301,9 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
     return (
       <div className="relative min-h-screen bg-black text-white flex items-center justify-center overflow-hidden">
         {/* Background Pattern */}
-        <div className="absolute inset-0 opacity-5">
-          <div className="absolute inset-0 bg-gradient-to-br from-white/10 to-transparent"></div>
-          <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_50%_50%,rgba(255,255,255,0.1),transparent_50%)]"></div>
+        <div className="absolute inset-0 smooth-gradient opacity-10">
+          <div className="absolute inset-0 bg-gradient-to-br from-white/5 via-white/2 to-transparent"></div>
+          <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_30%_30%,rgba(255,255,255,0.08),transparent_40%),radial-gradient(circle_at_70%_70%,rgba(255,255,255,0.05),transparent_40%)]"></div>
         </div>
         
         <div className="relative z-10 text-center">
@@ -407,9 +407,9 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
         </div>
       )}
       {/* Background Pattern */}
-      <div className="absolute inset-0 opacity-5">
-        <div className="absolute inset-0 bg-gradient-to-br from-white/10 to-transparent"></div>
-        <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_50%_50%,rgba(255,255,255,0.1),transparent_50%)]"></div>
+      <div className="absolute inset-0 smooth-gradient opacity-10">
+        <div className="absolute inset-0 bg-gradient-to-br from-white/5 via-white/2 to-transparent"></div>
+        <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_30%_30%,rgba(255,255,255,0.08),transparent_40%),radial-gradient(circle_at_70%_70%,rgba(255,255,255,0.05),transparent_40%)]"></div>
       </div>
 
       {/* Logo */}
@@ -465,7 +465,7 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
               src={images[0]} 
               alt={project.title} 
               fill 
-              className="object-cover transition-transform duration-700 ease-out hover:scale-105 cursor-pointer"
+              className="object-cover transition-all duration-1000 ease-out hover:scale-105 cursor-pointer"
               priority 
               onClick={() => openCarousel(0)}
               loading="eager"
@@ -541,10 +541,10 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
                     src={img} 
                     alt={project.title + ' still ' + (i+2)} 
                     fill 
-                    className="object-cover transition-transform duration-700 ease-out group-hover:scale-105" 
+                    className="object-cover transition-all duration-1000 ease-out group-hover:scale-105" 
                     loading="eager"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-black/10 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500 ease-out"></div>
                 </div>
               ))}
             </div>
@@ -553,7 +553,7 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
       </div>
 
       {/* Footer */}
-      <footer className="w-full text-center" style={{ color: 'rgba(255,255,255,0.5)', fontSize: '20px', fontFamily: 'Manrope', fontWeight: 400, height: '35px', lineHeight: '35px', background: 'none' }}>
+      <footer className="w-full text-center" style={{ color: 'rgba(255,255,255,0.5)', fontSize: '20px', fontFamily: 'Manrope', fontWeight: 400, height: '35px', lineHeight: '35px' }}>
         © 2025 Tomás Mateus. All rights reserved
       </footer>
     </div>

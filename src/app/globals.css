@@ -5,7 +5,7 @@
 :root {
   --foreground-rgb: 255, 255, 255;
   --background-start-rgb: 0, 0, 0;
-  --background-end-rgb: 0, 0, 0;
+  --background-end-rgb: 15, 15, 15;
   --accent-color: 255, 255, 255;
   --text-muted: 156, 163, 175;
 }
@@ -13,17 +13,32 @@
 body {
   color: rgb(var(--foreground-rgb));
   background: linear-gradient(
-    to bottom,
-    rgb(var(--background-start-rgb)),
-    rgb(var(--background-end-rgb))
+    135deg,
+    rgb(var(--background-start-rgb)) 0%,
+    rgb(8, 8, 8) 25%,
+    rgb(12, 12, 12) 50%,
+    rgb(8, 8, 8) 75%,
+    rgb(var(--background-end-rgb)) 100%
   );
+  background-attachment: fixed;
+  background-size: 400% 400%;
+  animation: gradientShift 20s ease-in-out infinite;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
+@keyframes gradientShift {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
 @layer base {
   html {
-    scroll-behavior: auto;
+    scroll-behavior: smooth;
   }
   
   body {
@@ -37,15 +52,15 @@ body {
   }
 
   .hover-zoom {
-    @apply transition-all duration-500 ease-out hover:scale-105;
+    @apply transition-all duration-700 ease-out hover:scale-105;
   }
 
   .nav-link {
-    @apply text-gray-400 hover:text-white transition-all duration-300 ease-out relative;
+    @apply text-gray-400 hover:text-white transition-all duration-500 ease-out relative;
   }
   
   .nav-link::after {
-    @apply content-[''] absolute bottom-0 left-0 w-0 h-0.5 bg-white transition-all duration-300 ease-out;
+    @apply content-[''] absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-white to-gray-300 transition-all duration-500 ease-out;
   }
   
   .nav-link:hover::after {
@@ -53,15 +68,27 @@ body {
   }
 
   .text-gradient {
-    @apply bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent;
+    @apply bg-gradient-to-r from-white via-gray-200 to-gray-300 bg-clip-text text-transparent;
+    background-size: 200% 200%;
+    animation: textGradient 3s ease-in-out infinite;
+  }
+
+  @keyframes textGradient {
+    0%, 100% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
   }
   
   .glass-effect {
     @apply backdrop-blur-md bg-black/20 border border-white/10;
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.1) 100%);
   }
   
   .card-hover {
-    @apply transition-all duration-500 ease-out hover:scale-105 hover:shadow-2xl;
+    @apply transition-all duration-700 ease-out hover:scale-105 hover:shadow-2xl;
   }
   
   .fade-in {
@@ -70,6 +97,28 @@ body {
   
   .slide-up {
     @apply animate-in slide-in-from-bottom-8 duration-1000;
+  }
+
+  .smooth-gradient {
+    background: linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0.05) 0%,
+      rgba(255, 255, 255, 0.02) 25%,
+      rgba(255, 255, 255, 0.01) 50%,
+      rgba(255, 255, 255, 0.02) 75%,
+      rgba(255, 255, 255, 0.05) 100%
+    );
+    background-size: 200% 200%;
+    animation: smoothGradient 8s ease-in-out infinite;
+  }
+
+  @keyframes smoothGradient {
+    0%, 100% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
   }
 }
 
@@ -87,12 +136,13 @@ body {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: rgba(255, 255, 255, 0.2);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0.1) 100%);
   border-radius: 4px;
+  transition: background 0.3s ease;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: rgba(255, 255, 255, 0.3);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0.2) 100%);
 }
 
 /* Smooth animations */
@@ -117,9 +167,9 @@ body {
 }
 
 .animate-fade-in-up {
-  animation: fadeInUp 0.8s ease-out;
+  animation: fadeInUp 1.2s ease-out;
 }
 
 .animate-fade-in {
-  animation: fadeIn 1s ease-out;
+  animation: fadeIn 1.5s ease-out;
 }
