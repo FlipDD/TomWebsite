@@ -2,7 +2,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import path from 'path'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 
 const projectFolders: { [key: string]: string } = {
   'ana-moura': 'ANA MOURA',
@@ -274,13 +274,30 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
   const [carouselOpen, setCarouselOpen] = useState(false)
   const [carouselIndex, setCarouselIndex] = useState(0)
 
-  const openCarousel = (idx: number) => {
-    setCarouselIndex(idx)
-    setCarouselOpen(true)
-  }
-  const closeCarousel = () => setCarouselOpen(false)
+  // Close carousel function
+  const closeCarousel = () => {
+    setCarouselOpen(false);
+    setCarouselIndex(0);
+    // Re-enable body scrolling
+    document.body.style.overflow = 'auto';
+  };
+
+  // Open carousel function
+  const openCarousel = (index: number) => {
+    setCarouselIndex(index);
+    setCarouselOpen(true);
+    // Disable body scrolling when carousel is open
+    document.body.style.overflow = 'hidden';
+  };
   const prevImage = () => setCarouselIndex((i) => (i - 1 + images.length) % images.length)
   const nextImage = () => setCarouselIndex((i) => (i + 1) % images.length)
+
+  // Cleanup effect to restore body overflow when component unmounts
+  useEffect(() => {
+    return () => {
+      document.body.style.overflow = 'auto';
+    };
+  }, []);
 
   if (!project) {
     return (
