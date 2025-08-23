@@ -16,6 +16,16 @@ const projectFolders: { [key: string]: string } = {
   'capital-bulgaria': 'CAPITAL_BULGARIA',
   'blaya': 'BLAYA',
   '7777angels': '7777ANGELS',
+  'aurora': 'AURORA',
+  'lucyval': 'LUCYVAL',
+  'mafama': 'MAFAMA',
+  'mishlawi': 'MISHLAWI',
+  'napa': 'NAPA',
+  'ricardo-ribeiro': 'RICARDO RIBEIRO',
+  'rossk': 'ROSSK',
+  'sotaques': 'SOTAQUES',
+  'tixa-acordar': 'TIXA ACORDAR',
+  'tixa-metime': 'TIXA METIME',
 }
 
 const projects: { [key: string]: any } = {
