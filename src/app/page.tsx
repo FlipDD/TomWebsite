@@ -111,12 +111,12 @@ export default function Home() {
         <main className="flex-1 flex items-center justify-center min-h-screen">
           <div className="w-full grid grid-cols-3 gap-0">
             {projects.map((project, i) => (
-              <Link key={i} href={`/work/${project.slug}`} className="relative w-full aspect-[16/9] group">
+              <Link key={i} href={`/work/${project.slug}`} className="relative w-full aspect-[16/9] group overflow-hidden">
                 <Image
                   src={project.image}
                   alt={project.title}
                   fill
-                  className="object-cover w-full h-full"
+                  className="object-cover transition-all duration-1000 ease-out group-hover:scale-105"
                   sizes="33vw"
                   priority={i < 6}
                 />
