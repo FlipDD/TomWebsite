@@ -119,7 +119,7 @@ export default function Home() {
                 />
                 {/* Overlay with title on hover */}
                 <div className="absolute inset-0 flex items-center justify-center bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <span className="text-white text-2xl md:text-3xl font-medium text-center px-4 font-[Manrope]">
+                  <span className="text-white font-medium text-center px-4 font-[Manrope]" style={{ fontSize: '24px' }}>
                     {project.title}
                   </span>
                 </div>
