@@ -81,7 +81,7 @@ export default function Home() {
         </div>
       </div>
 
-                                       {/* Fixed Footer */}
+                                        {/* Fixed Footer */}
               <footer className="fixed bottom-0 left-0 w-full text-center z-40">
                <p className="text-white text-[20px] font-[Manrope] m-0 p-2">
                  © 2025 Tomás Mateus. All rights reserved
@@ -90,15 +90,18 @@ export default function Home() {
 
       {/* Section 1: Landing Page */}
       <section className="relative min-h-screen w-full flex flex-col justify-between" style={{ minHeight: '100vh' }}>
-        {/* Background Image */}
+        {/* Background Video */}
         <div className="absolute inset-0 -z-10">
-          <Image
-            src="/ANA MOURA/Screenshot 2025-03-04 at 16.07.13.png"
-            alt="Landing Background"
-            fill
-            className="object-cover w-full h-full object-top"
-            priority
-          />
+          <video
+            autoPlay
+            muted
+            loop
+            playsInline
+            className="object-cover w-full h-full"
+            style={{ objectPosition: 'top' }}
+          >
+            <source src="/videolandingpage.mp4" type="video/mp4" />
+          </video>
         </div>
       </section>
 
