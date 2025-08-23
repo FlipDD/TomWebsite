@@ -86,13 +86,8 @@ export default function Contact() {
               lineHeight: 'normal',
             }}
           >
-            My name is Tomás Mateus I’m a freelance Colorist based in Lisbon, Portugal, with a Bachelor’s degree 
-            in Cinema from Lusófona University.<br/><br/>
-            My work as a colorist includes collaborations with 
-            some of the most prominent names in the 
-            portuguese music scene. <br/><br/>
-            Recently, thanks to my experience in the industry, taking on the role of director for a few music videos 
-            has also come naturally.
+            My name is Tomás Mateus I'm a freelance Colorist based in Lisbon, Portugal, with a Bachelor's degree 
+            in Cinema from Lusófona University.
           </div>
           <div className="mt-12 space-y-6">
             <div style={{ width: '511.2px', flexShrink: 0 }}>

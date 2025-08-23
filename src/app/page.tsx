@@ -15,11 +15,6 @@ const projects = [
     slug: 'vsp',
   },
   {
-    title: 'Sharkskin',
-    image: '/portfolio/sharkskin.png',
-    slug: 'sharkskin',
-  },
-  {
     title: 'Richie',
     image: '/portfolio/richie.png',
     slug: 'richie',
