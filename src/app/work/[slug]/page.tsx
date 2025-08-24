@@ -484,43 +484,13 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
         ) : null}
 
         {/* Title & Credits */}
-        <div className="text-center mb-16 mx-auto">
+        <div className="text-center mb-16 mx-auto px-4">
           <h1
-            style={{
-              width: '1343.3px',
-              height: '28px',
-              flexShrink: 0,
-              color: '#FFF',
-              textAlign: 'center',
-              fontFamily: 'Manrope',
-              fontSize: '28px',
-              fontStyle: 'normal',
-              fontWeight: 500,
-              lineHeight: 'normal',
-              margin: '0 auto 65px auto',
-            }}
+            className="text-2xl md:text-3xl lg:text-4xl text-white font-medium font-[Manrope] mb-16"
           >
             {project.title}
           </h1>
-          <div
-            style={{
-              width: '1343.3px',
-              height: '77px',
-              flexShrink: 0,
-              color: '#FFF',
-              textAlign: 'center',
-              fontFamily: 'Manrope',
-              fontSize: '21px',
-              fontStyle: 'normal',
-              fontWeight: 400,
-              lineHeight: 'normal',
-              margin: '0 auto',
-              display: 'flex',
-              flexDirection: 'column',
-              justifyContent: 'center',
-              alignItems: 'center',
-            }}
-          >
+          <div className="text-lg md:text-xl lg:text-2xl text-white font-normal font-[Manrope] flex flex-col justify-center items-center space-y-2">
             {project.director && (
               <div>Director {project.director}</div>
             )}
