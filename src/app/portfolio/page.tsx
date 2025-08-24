@@ -71,7 +71,7 @@ export default function PortfolioGrid() {
         <div className="text-right space-y-1">
           {/* WORK button */}
           <Link
-            href="/portfolio"
+            href=""
             className="block transition-all duration-500 ease-out focus:outline-none hover:scale-110"
             style={{ color: '#FFF', fontFamily: 'Manrope', fontSize: '28px', fontWeight: 650, lineHeight: 'normal', width: 'fit-content', marginLeft: 'auto' }}
           >

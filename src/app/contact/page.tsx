@@ -27,7 +27,7 @@ export default function Contact() {
       <div className="fixed top-0 right-0 h-full flex flex-col items-end justify-center pr-4 sm:pr-9 z-30 mix-blend-difference">
         <div className="text-right space-y-1">
           <Link 
-            href="/portfolio" 
+            href="/" 
             className="block transition-all duration-500 ease-out hover:scale-110"
             style={{ color: '#FFF', fontFamily: 'Manrope', fontSize: 'clamp(20px, 4vw, 28px)', fontWeight: 650, lineHeight: 'normal', width: 'fit-content', marginLeft: 'auto' }}
           >
