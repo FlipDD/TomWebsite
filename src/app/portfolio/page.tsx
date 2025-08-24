@@ -89,26 +89,28 @@ export default function PortfolioGrid() {
       </div>
 
       {/* Portfolio Grid */}
-      <main className="flex-1 flex items-center justify-center">
-        <div className="w-full grid grid-cols-3 gap-0">
-          {projects.map((project, i) => (
-            <Link key={i} href={`/work/${project.slug}`} className="relative w-full aspect-[16/9] group">
-              <Image
-                src={project.image}
-                alt={project.title}
-                fill
-                className="object-cover w-full h-full"
-                sizes="33vw"
-                priority={i < 6}
-              />
-              {/* Overlay with title on hover */}
-              <div className="absolute inset-0 flex items-center justify-center bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                <span className="text-white text-2xl md:text-3xl font-medium text-center px-4 font-[Manrope]">
-                  {project.title}
-                </span>
-              </div>
-            </Link>
-          ))}
+      <main className="flex-1">
+        <div className="w-full max-w-7xl mx-auto px-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            {projects.map((project, i) => (
+              <Link key={i} href={`/work/${project.slug}`} className="relative w-full aspect-[16/9] group">
+                <Image
+                  src={project.image}
+                  alt={project.title}
+                  fill
+                  className="object-cover w-full h-full"
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                  priority={i < 6}
+                />
+                {/* Overlay with title on hover */}
+                <div className="absolute inset-0 flex items-center justify-center bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <span className="text-white text-2xl md:text-3xl font-medium text-center px-4 font-[Manrope]">
+                    {project.title}
+                  </span>
+                </div>
+              </Link>
+            ))}
+          </div>
         </div>
       </main>
 
