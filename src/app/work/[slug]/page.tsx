@@ -331,10 +331,10 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
             &times;
           </button>
           <div className="relative flex items-center justify-center w-full h-full" style={{ minHeight: '60vh' }}>
-            {/* Previous Image Preview */}
+            {/* Previous Image Preview - Hidden on small screens */}
             {images.length > 1 && (
               <div
-                className="absolute left-0 top-1/2 -translate-y-1/2 flex items-center justify-center cursor-pointer opacity-60 hover:opacity-90 transition-opacity z-40"
+                className="absolute left-0 top-1/2 -translate-y-1/2 flex items-center justify-center cursor-pointer opacity-60 hover:opacity-90 transition-opacity z-40 hidden md:block"
                 style={{ width: '12vw', height: '60%', maxWidth: '200px', minWidth: '100px' }}
                 onClick={prevImage}
               >
@@ -350,6 +350,20 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
                 </div>
               </div>
             )}
+            
+            {/* Previous Arrow Button - Only visible on small screens */}
+            {images.length > 1 && (
+              <button
+                className="absolute left-4 top-1/2 -translate-y-1/2 flex items-center justify-center cursor-pointer opacity-70 hover:opacity-100 transition-opacity z-40 bg-black/50 backdrop-blur-sm rounded-full p-3 hover:bg-black/70 md:hidden"
+                onClick={prevImage}
+                aria-label="Previous image"
+              >
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M15 18L9 12L15 6" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                </svg>
+              </button>
+            )}
+            
             {/* Main Image */}
             <div className="bg-black p-2 md:p-6 rounded-none shadow-2xl flex items-center justify-center" style={{ maxWidth: '95vw', maxHeight: '90vh' }}>
               <div className="relative w-[90vw] h-[60vw] max-w-[1507px] max-h-[80vh] flex items-center justify-center">
@@ -363,10 +377,11 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
                 />
               </div>
             </div>
-            {/* Next Image Preview */}
+            
+            {/* Next Image Preview - Hidden on small screens */}
             {images.length > 1 && (
               <div
-                className="absolute right-0 top-1/2 -translate-y-1/2 flex items-center justify-center cursor-pointer opacity-60 hover:opacity-90 transition-opacity z-40"
+                className="absolute right-0 top-1/2 -translate-y-1/2 flex items-center justify-center cursor-pointer opacity-60 hover:opacity-90 transition-opacity z-40 hidden md:block"
                 style={{ width: '12vw', height: '60%', maxWidth: '200px', minWidth: '100px' }}
                 onClick={nextImage}
               >
@@ -381,6 +396,19 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
                   />
                 </div>
               </div>
+            )}
+            
+            {/* Next Arrow Button - Only visible on small screens */}
+            {images.length > 1 && (
+              <button
+                className="absolute right-4 top-1/2 -translate-y-1/2 flex items-center justify-center cursor-pointer opacity-70 hover:opacity-100 transition-opacity z-40 bg-black/50 backdrop-blur-sm rounded-full p-3 hover:bg-black/70 md:hidden"
+                onClick={nextImage}
+                aria-label="Next image"
+              >
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M9 18L15 12L9 6" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                </svg>
+              </button>
             )}
           </div>
           {/* Dots */}
