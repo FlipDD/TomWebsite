@@ -389,7 +389,7 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
             &times;
           </button>
           <div 
-            className="relative flex items-center justify-center w-full h-full" 
+            className="relative flex items-center justify-center w-full" 
             style={{ minHeight: '60vh' }}
             onTouchStart={handleTouchStart}
             onTouchMove={handleTouchMove}
@@ -475,29 +475,37 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
               </button>
             )}
           </div>
-          {/* Dots */}
-          <div className="relative flex justify-center items-center mt-6 mb-2 z-50" style={{ width: `${images.length * 16 - 4}px`, height: '12px' }}>
-            {images.map((_, idx) => (
-              <button
-                key={idx}
-                className="absolute rounded-full"
-                style={{
-                  width: '12px',
-                  height: '12px',
-                  left: `${idx * 16.36}px`,
-                  background: '#D9D9D9',
-                  opacity: carouselIndex === idx ? 1 : 0.41,
-                  transition: 'opacity 0.2s',
-                  border: 'none',
-                  outline: 'none',
-                  cursor: 'pointer',
-                  padding: 0,
-                }}
-                onClick={() => setCarouselIndex(idx)}
-                aria-label={`Go to image ${idx + 1}`}
-              />
-            ))}
-          </div>
+                     {/* Pagination and Dots */}
+           <div className="flex flex-col items-center mt-2 mb-2 z-50">
+             {/* Image Counter */}
+             <div className="text-white text-lg font-medium mb-2" style={{ fontFamily: 'Manrope' }}>
+               {carouselIndex + 1} / {images.length}
+             </div>
+             
+             {/* Dots */}
+             <div className="relative flex justify-center items-center" style={{ width: `${images.length * 16 - 4}px`, height: '12px' }}>
+               {images.map((_, idx) => (
+                 <button
+                   key={idx}
+                   className="absolute rounded-full"
+                   style={{
+                     width: '12px',
+                     height: '12px',
+                     left: `${idx * 16.36}px`,
+                     background: '#D9D9D9',
+                     opacity: carouselIndex === idx ? 1 : 0.41,
+                     transition: 'opacity 0.2s',
+                     border: 'none',
+                     outline: 'none',
+                     cursor: 'pointer',
+                     padding: 0,
+                   }}
+                   onClick={() => setCarouselIndex(idx)}
+                   aria-label={`Go to image ${idx + 1}`}
+                 />
+               ))}
+             </div>
+           </div>
         </div>
       )}
       {/* Background Pattern */}
