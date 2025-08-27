@@ -28,77 +28,104 @@ const projectFolders: { [key: string]: string } = {
   'tixa-metime': 'TIXA METIME',
 }
 
-const projects: { [key: string]: any } = {
+interface Credit {
+  title: string;
+  people: string[];
+}
+
+interface Project {
+  title: string;
+  description: string;
+  credits: Credit[];
+  videoUrl?: string;
+}
+
+const projects: { [key: string]: Project } = {
   'ana-moura': {
     title: 'Ana Moura - Desliza',
     description: 'Music video for Ana Moura\'s single "Desliza"',
-    director: 'André Canicos',
-    production: 'One House Only',
-    dop: 'Bernardo Infante',
+    credits: [
+      { title: 'Director', people: ['André Canicos'] },
+      { title: 'Production', people: ['One House Only'] },
+      { title: 'Director of Photography', people: ['Bernardo Infante'] },
+    ],
     videoUrl: 'https://www.youtube.com/watch?v=05SRUBxRbQQ',
   },
   'vsp': {
     title: 'VSP AST - AGUARELA',
     description: 'Music video for VSP',
-    director: 'Gonçalo Afonso',
-    production: 'One House Only',
-    dop: 'Bernardo Infante',
+    credits: [
+      { title: 'Director', people: ['Gonçalo Afonso'] },
+      { title: 'Production', people: ['One House Only'] },
+      { title: 'Director of Photography', people: ['Bernardo Infante'] },
+    ],
     videoUrl: 'https://www.youtube.com/watch?v=byXXO86c-Js',
   },
   'richie': {
     title: 'Richie Campbell - Before I Lose My Voice',
     description: 'Music video for Richie Campbell',
-    director: 'Gonçalo Afonso',
-    production: 'One House Only',
-    dop: 'Bernardo Infante',
+    credits: [
+      { title: 'Director', people: ['Gonçalo Afonso'] },
+      { title: 'Production', people: ['One House Only'] },
+      { title: 'Director of Photography', people: ['Bernardo Infante'] },
+    ],
     videoUrl: 'https://www.youtube.com/watch?v=1adIP_umouw',
   },
   'nenny': {
     title: 'Nenny - Normal',
     description: 'Music video for Nenny',
-    director: 'Leonor Patrocínio',
-    production: 'One House Only',
-    dop: 'Pedro Patrocínio',
+    credits: [
+      { title: 'Director', people: ['Leonor Patrocínio'] },
+      { title: 'Production', people: ['One House Only'] },
+      { title: 'Director of Photography', people: ['Pedro Patrocínio'] },
+    ],
     videoUrl: 'https://www.youtube.com/watch?v=Xty4iPW1rZI',
   },
   'murta-jura': {
     title: 'Murta, JÜRA - INVISÍVEL',
     description: 'Music video for Murta x Jura',
-    director: 'Leonor Patrocínio',
-    production: 'One House Only',
-    dop: 'Pedro Patrocínio',
+    credits: [
+      { title: 'Director', people: ['Leonor Patrocínio'] },
+      { title: 'Production', people: ['One House Only'] },
+      { title: 'Director of Photography', people: ['Pedro Patrocínio'] },
+    ],
     videoUrl: 'https://www.youtube.com/watch?v=Xty4iPW1rZI',
   },
   'hodierno': {
     title: 'Hodierno',
     description: 'Short Film for Hodierno',
-    director: 'Gonçalo Fonseca',
-    production: '',
-    dop: 'Matheus Kakeya Goulart',
+    credits: [
+      { title: 'Director', people: ['Gonçalo Fonseca'] },
+      { title: 'Director of Photography', people: ['Matheus Kakeya Goulart'] },
+    ],
     videoUrl: '',
   },
   'capital-bulgaria': {
     title: 'Capital da Bulgária - Família',
     description: 'Music video for Capital Bulgaria',
-    director: 'André Canicos',
-    production: 'One House Only',
-    dop: 'Bernardo Infante',
+    credits: [
+      { title: 'Director', people: ['André Canicos'] },
+      { title: 'Production', people: ['One House Only'] },
+      { title: 'Director of Photography', people: ['Bernardo Infante'] },
+    ],
     videoUrl: 'https://www.youtube.com/watch?v=50X9v3bomC4&list=RDEMqtau8NR8bAl4PzPNzNcNGg&start_radio=1',
   },
   'blaya': {
     title: 'BLAYA - Quero Saber',
     description: 'Music video for Blaya',
-    director: 'Andreia Pereira Silva and João Afonso Vaz',
-    production: 'Maus da Fita',
-    dop: 'Duarte Felgueiras and Filipe Malveiro',
+    credits: [
+      { title: 'Director', people: ['Andreia Pereira Silva', 'João Afonso Vaz'] },
+      { title: 'Production', people: ['Maus da Fita'] },
+      { title: 'Director of Photography', people: ['Duarte Felgueiras', 'Filipe Malveiro'] },
+    ],
     videoUrl: 'https://www.youtube.com/watch?v=GZvdvVrEhbs',
   },
   '7777angels': {
     title: '7777 の天使 - All Ends With Nothing',
     description: 'Music video for 7777 Angels',
-    director: 'Inês Baptista and João Marques',
-    production: '',
-    dop: '',
+    credits: [
+      { title: 'Director', people: ['Inês Baptista', 'João Marques'] },
+    ],
     videoUrl: 'https://www.youtube.com/watch?v=5rKAEceBmPk',
   },
 }
@@ -518,16 +545,19 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
           >
             {project.title}
           </h1>
-          <div className="text-lg md:text-xl lg:text-2xl text-white font-normal font-[Manrope] flex flex-col justify-center items-center space-y-2">
-            {project.director && (
-              <div>Director {project.director}</div>
-            )}
-            {project.production && (
-              <div>Production {project.production}</div>
-            )}
-            {project.dop && (
-              <div>Director of Photography {project.dop}</div>
-            )}
+          <div className="text-lg md:text-xl lg:text-2xl text-white font-normal font-[Manrope] flex flex-col justify-center items-center space-y-4">
+            {project.credits.map((credit, index) => (
+              <div key={index} className="flex flex-col items-center">
+                <span className="text-gray-300 font-medium mb-1">{credit.title}</span>
+                <div className="flex flex-wrap justify-center gap-x-2">
+                  {credit.people.map((person, personIndex) => (
+                    <span key={personIndex} className="text-white">
+                      {person}{personIndex < credit.people.length - 1 ? ', ' : ''}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            ))}
           </div>
         </div>
 
