@@ -300,6 +300,8 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
   // Carousel state
   const [carouselOpen, setCarouselOpen] = useState(false)
   const [carouselIndex, setCarouselIndex] = useState(0)
+  const [touchStart, setTouchStart] = useState(0)
+  const [touchEnd, setTouchEnd] = useState(0)
 
   // Close carousel function
   const closeCarousel = () => {
@@ -316,8 +318,37 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
     // Disable body scrolling when carousel is open
     document.body.style.overflow = 'hidden';
   };
+  
   const prevImage = () => setCarouselIndex((i) => (i - 1 + images.length) % images.length)
   const nextImage = () => setCarouselIndex((i) => (i + 1) % images.length)
+
+  // Touch handlers for swipe functionality
+  const handleTouchStart = (e: React.TouchEvent) => {
+    setTouchStart(e.targetTouches[0].clientX);
+  };
+
+  const handleTouchMove = (e: React.TouchEvent) => {
+    setTouchEnd(e.targetTouches[0].clientX);
+  };
+
+  const handleTouchEnd = () => {
+    if (!touchStart || !touchEnd) return;
+    
+    const distance = touchStart - touchEnd;
+    const isLeftSwipe = distance > 50;
+    const isRightSwipe = distance < -50;
+
+    if (isLeftSwipe) {
+      nextImage();
+    }
+    if (isRightSwipe) {
+      prevImage();
+    }
+
+    // Reset values
+    setTouchStart(0);
+    setTouchEnd(0);
+  };
 
   // Cleanup effect to restore body overflow when component unmounts
   useEffect(() => {
@@ -357,7 +388,13 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
           >
             &times;
           </button>
-          <div className="relative flex items-center justify-center w-full h-full" style={{ minHeight: '60vh' }}>
+          <div 
+            className="relative flex items-center justify-center w-full h-full" 
+            style={{ minHeight: '60vh' }}
+            onTouchStart={handleTouchStart}
+            onTouchMove={handleTouchMove}
+            onTouchEnd={handleTouchEnd}
+          >
             {/* Previous Image Preview - Hidden on small screens */}
             {images.length > 1 && (
               <div
