@@ -6,48 +6,103 @@ import Link from "next/link";
 const projects = [
   {
     title: 'Ana Moura - Desliza',
-    image: '/portfolio/ana-moura.png',
+    image: '/portfolio/ana-moura.jpg',
     slug: 'ana-moura',
   },
   {
-    title: 'VSP',
-    image: '/portfolio/vsp.png',
+    title: 'VSP AST - AGUARELA',
+    image: '/portfolio/vsp.jpg',
     slug: 'vsp',
   },
   {
-    title: 'Richie',
-    image: '/portfolio/richie.png',
+    title: 'SHARKSKIN',
+    image: '/portfolio/sharkskin.jpg',
+    slug: 'sharkskin',
+  },
+  {
+    title: 'Richie Campbell - Before I Lose My Voice',
+    image: '/portfolio/richie.jpg',
     slug: 'richie',
   },
   {
-    title: 'Nenny',
-    image: '/portfolio/nenny.png',
+    title: 'Nenny - Normal',
+    image: '/portfolio/nenny.jpg',
     slug: 'nenny',
   },
   {
-    title: 'Murta x Jura',
-    image: '/portfolio/murta-jura.png',
+    title: 'Murta, JÜRA - INVISÍVEL',
+    image: '/portfolio/murta-jura.jpg',
     slug: 'murta-jura',
   },
   {
     title: 'Hodierno',
-    image: '/portfolio/hodierno.png',
+    image: '/portfolio/hodierno.jpg',
     slug: 'hodierno',
   },
   {
-    title: 'Capital Bulgaria',
-    image: '/portfolio/capital-bulgaria.png',
+    title: 'Capital da Bulgária - Família',
+    image: '/portfolio/capital-bulgaria.jpg',
     slug: 'capital-bulgaria',
   },
   {
-    title: 'Blaya',
-    image: '/portfolio/blaya.png',
+    title: 'BLAYA - Quero Saber',
+    image: '/portfolio/blaya.jpg',
     slug: 'blaya',
   },
   {
-    title: '7777 Angels',
-    image: '/portfolio/7777angels.png',
+    title: '7777 の天使 - All Ends With Nothing',
+    image: '/portfolio/7777angels.jpg',
     slug: '7777angels',
+  },
+  {
+    title: 'Ross K - What Youre Feeling',
+    image: '/portfolio/rossk.jpg',
+    slug: 'rossk_whatufeeling',
+  },
+  {
+    title: 'Ricardo Ribeiro - Má Sorte',
+    image: '/portfolio/ricardoribeiro.jpg',
+    slug: 'ricardoribeiro_masorte',
+  },
+  {
+    title: 'Aurora Pinto - Cães e Gatos',
+    image: '/portfolio/aurora.jpg',
+    slug: 'aurora_pinto',
+  },
+  {
+    title: 'Pedro Mafama - milésimo de segundo ( feat Cheb Nassim )',
+    image: '/portfolio/mafama.jpg',
+    slug: 'pedro_mafama_milesimo',
+  },
+  {
+    title: 'Napa feat. Van Zee - Infinito',
+    image: '/portfolio/napa.jpg',
+    slug: 'napa_vanzee',
+  },
+  {
+    title: 'Sotaques 2025',
+    image: '/portfolio/sotaques.jpg',
+    slug: 'sotaques',
+  },
+  {
+    title: 'LUCY VAL - ENFIM',
+    image: '/portfolio/lucyval.jpg',
+    slug: 'lucy_val',
+  },
+  {
+    title: 'Mishlawi - Done Playing',
+    image: '/portfolio/mishlawi.jpg',
+    slug: 'mishlawi',
+  },
+  {
+    title: 'TIXA - ACORDAR',
+    image: '/portfolio/tixa-acordar.jpg',
+    slug: 'tixa_acordar',
+  },
+  {
+    title: 'TIXA - ME TIME',
+    image: '/portfolio/tixa-metime.jpg',
+    slug: 'tixa_metime',
   },
 ];
 
