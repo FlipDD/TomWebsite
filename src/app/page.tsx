@@ -15,11 +15,6 @@ const projects = [
     slug: 'vsp',
   },
   {
-    title: 'SHARKSKIN',
-    image: '/portfolio/sharkskin.jpg',
-    slug: 'sharkskin',
-  },
-  {
     title: 'Richie Campbell - Before I Lose My Voice',
     image: '/portfolio/richie.jpg',
     slug: 'richie',
