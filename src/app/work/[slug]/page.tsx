@@ -490,25 +490,6 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
         </Link>
       </div>
 
-      {/* Sidebar Navigation */}
-      <div className="fixed top-0 right-0 h-full flex flex-col items-end justify-center pr-9 z-30 mix-blend-difference">
-        <div className="text-right space-y-1">
-          <Link 
-            href="/" 
-            className="block transition-all duration-500 ease-out hover:scale-110"
-            style={{ color: '#FFF', fontFamily: 'Manrope', fontSize: '28px', fontWeight: 650, lineHeight: 'normal', width: 'fit-content', marginLeft: 'auto' }}
-          >
-            WORK
-          </Link>
-          <Link 
-            href="/contact" 
-            className="block transition-all duration-500 ease-out hover:scale-110"
-            style={{ color: '#FFF', fontFamily: 'Manrope', fontSize: '28px', fontWeight: 650, lineHeight: 'normal', width: 'fit-content', marginLeft: 'auto' }}
-          >
-            CONTACT
-          </Link>
-        </div>
-      </div>
 
       {/* Main Content */}
       <div className="relative z-10 flex flex-col items-center justify-center min-h-screen pt-32 pb-16">
