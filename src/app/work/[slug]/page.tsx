@@ -591,7 +591,7 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
       </div>
 
       {/* Footer */}
-      <footer className="w-full text-center" style={{ color: 'rgba(255,255,255,0.5)', fontSize: '20px', fontFamily: 'Manrope', fontWeight: 400, height: '35px', lineHeight: '35px' }}>
+      <footer className="w-full text-center text-sm sm:text-base md:text-lg lg:text-xl" style={{ color: 'rgba(255,255,255,0.5)', fontFamily: 'Manrope', fontWeight: 400, height: '35px', lineHeight: '35px' }}>
         © 2025 Tomás Mateus. All rights reserved
       </footer>
     </div>
