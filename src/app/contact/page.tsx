@@ -3,7 +3,7 @@ import Link from 'next/link';
 
 export default function Contact() {
   return (
-    <div className="relative min-h-screen bg-black overflow-hidden">
+    <div className="relative min-h-screen bg-black overflow-hidden flex flex-col">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-5">
         <div className="absolute inset-0 bg-gradient-to-br from-white/10 to-transparent"></div>
@@ -88,7 +88,7 @@ export default function Contact() {
       </div>
 
       {/* Footer */}
-      <footer className="fixed bottom-0 left-0 w-full text-center z-40 bg-black/50 backdrop-blur-sm">
+      <footer className="w-full text-center mt-auto">
         <p className="text-white text-xs sm:text-sm md:text-base lg:text-base font-[Manrope] m-0 p-2">
           © 2025 Tomás Mateus. All rights reserved
         </p>
