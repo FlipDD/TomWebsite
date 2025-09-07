@@ -386,7 +386,7 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
             
             
             {/* Main Image with Clickable Sides */}
-            <div className="bg-black p-2 md:p-6 rounded-none shadow-2xl flex items-center justify-center relative" style={{ maxWidth: '95vw', maxHeight: '90vh' }}>
+            <div className="bg-black p-0 md:p-6 rounded-none shadow-2xl flex items-center justify-center relative" style={{ maxWidth: '100vw', maxHeight: '100vh' }}>
               {/* Left Clickable Area */}
               {images.length > 1 && (
                 <div 
@@ -405,7 +405,7 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
                 />
               )}
               
-              <div className="relative w-[90vw] h-[60vw] max-w-[1507px] max-h-[80vh] flex items-center justify-center">
+              <div className="relative w-[100vw] h-[100vh] md:w-[90vw] md:h-[60vw] max-w-[1507px] max-h-[80vh] flex items-center justify-center">
                 <Image
                   src={images[carouselIndex]}
                   alt={project.title + ' still ' + (carouselIndex + 1)}
