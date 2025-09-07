@@ -108,7 +108,7 @@ export default function Contact() {
 
       {/* Footer */}
       <footer className="fixed bottom-0 left-0 w-full text-center z-40 bg-black/50 backdrop-blur-sm">
-        <p className="text-white text-base sm:text-lg lg:text-xl font-[Manrope] m-0 p-3 sm:p-4">
+        <p className="text-white text-xs sm:text-sm md:text-base lg:text-base font-[Manrope] m-0 p-2">
           © 2025 Tomás Mateus. All rights reserved
         </p>
       </footer>
