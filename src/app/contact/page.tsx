@@ -30,7 +30,7 @@ export default function Contact() {
           {/* Self Portrait - Responsive sizing */}
           <div className="relative w-full max-w-[609px] aspect-[676.82/670.40] mb-4">
             <Image
-              src="/portfolio/logo-photo.png"
+              src="/LOGO_PHOTO/Screenshot 2024-04-22 at 19.29.32.png"
               alt="Tomás Mateus Self Portrait"
               fill
               className="object-cover"
