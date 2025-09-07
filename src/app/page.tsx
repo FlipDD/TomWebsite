@@ -159,8 +159,8 @@ export default function Home() {
       <section id="portfolio-section" className="relative min-h-screen bg-black">
         {/* Portfolio Grid */}
         <main className="w-full">
-          <div className="w-screen overflow-x-hidden">
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-0 w-screen">
+          <div className="w-full overflow-x-hidden">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-0 w-full">
               {projects.map((project, i) => (
                 <Link key={i} href={`/work/${project.slug}`} className="relative w-full aspect-[16/9] group overflow-hidden">
                   <Image
