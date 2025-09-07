@@ -11,32 +11,31 @@ export default function Contact() {
       </div>
 
       {/* Logo */}
-      <div className="fixed top-4 sm:top-9 left-4 sm:left-9 z-30 mix-blend-difference">
+      <div className="fixed top-9 left-9 z-50 mix-blend-difference">
         <Link href="/">
           <Image 
             src="/logo/logowhite.png" 
             alt="Tomás Mateus Logo" 
             width={330} 
             height={90}
-            className="w-48 sm:w-auto hover:opacity-80 transition-opacity duration-300"
           />
         </Link>
       </div>
 
       {/* Sidebar Navigation */}
-      <div className="fixed top-0 right-0 h-full flex flex-col items-end justify-center pr-4 sm:pr-9 z-30 mix-blend-difference">
+      <div className="fixed top-0 right-0 h-full flex flex-col items-end justify-center pr-9 z-40 select-none mix-blend-difference">
         <div className="text-right space-y-1">
           <Link 
             href="/" 
-            className="block transition-all duration-500 ease-out hover:scale-110"
-            style={{ color: '#FFF', fontFamily: 'Manrope', fontSize: 'clamp(20px, 4vw, 28px)', fontWeight: 650, lineHeight: 'normal', width: 'fit-content', marginLeft: 'auto' }}
+            className="block transition-all duration-500 ease-out focus:outline-none hover:scale-110"
+            style={{ color: '#FFF', fontFamily: 'Manrope', fontSize: '28px', fontWeight: 650, lineHeight: 'normal', width: 'fit-content', marginLeft: 'auto' }}
           >
             WORK
           </Link>
           <Link 
             href="/contact" 
-            className="block transition-all duration-500 ease-out hover:scale-110"
-            style={{ color: '#FFF', fontFamily: 'Manrope', fontSize: 'clamp(20px, 4vw, 28px)', fontWeight: 650, lineHeight: 'normal', width: 'fit-content', marginLeft: 'auto' }}
+            className="block transition-all duration-500 ease-out mt-8 hover:scale-110"
+            style={{ color: '#FFF', fontFamily: 'Manrope', fontSize: '28px', fontWeight: 650, lineHeight: 'normal', width: 'fit-content', marginLeft: 'auto' }}
           >
             CONTACT
           </Link>
