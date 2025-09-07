@@ -231,7 +231,7 @@ function getProjectImages(slug: string) {
     'ana-moura': 12,
     'vsp': 9,
     'sharkskin': 15,
-    'richie': 20,
+    'richie': 12,
     'nenny': 14,
     'murta-jura': 15,
     'logo-photo': 3,
@@ -384,21 +384,27 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
               </div>
             )}
             
-            {/* Previous Arrow Button - Only visible on small screens */}
-            {images.length > 1 && (
-              <button
-                className="absolute left-4 top-1/2 -translate-y-1/2 flex items-center justify-center cursor-pointer opacity-70 hover:opacity-100 transition-opacity z-40 bg-black/50 backdrop-blur-sm rounded-full p-3 hover:bg-black/70 md:hidden"
-                onClick={prevImage}
-                aria-label="Previous image"
-              >
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M15 18L9 12L15 6" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                </svg>
-              </button>
-            )}
             
-            {/* Main Image */}
-            <div className="bg-black p-2 md:p-6 rounded-none shadow-2xl flex items-center justify-center" style={{ maxWidth: '95vw', maxHeight: '90vh' }}>
+            {/* Main Image with Clickable Sides */}
+            <div className="bg-black p-2 md:p-6 rounded-none shadow-2xl flex items-center justify-center relative" style={{ maxWidth: '95vw', maxHeight: '90vh' }}>
+              {/* Left Clickable Area */}
+              {images.length > 1 && (
+                <div 
+                  className="absolute left-0 top-0 w-1/3 h-full cursor-pointer z-30"
+                  onClick={prevImage}
+                  aria-label="Previous image"
+                />
+              )}
+              
+              {/* Right Clickable Area */}
+              {images.length > 1 && (
+                <div 
+                  className="absolute right-0 top-0 w-1/3 h-full cursor-pointer z-30"
+                  onClick={nextImage}
+                  aria-label="Next image"
+                />
+              )}
+              
               <div className="relative w-[90vw] h-[60vw] max-w-[1507px] max-h-[80vh] flex items-center justify-center">
                 <Image
                   src={images[carouselIndex]}
@@ -431,18 +437,6 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
               </div>
             )}
             
-            {/* Next Arrow Button - Only visible on small screens */}
-            {images.length > 1 && (
-              <button
-                className="absolute right-4 top-1/2 -translate-y-1/2 flex items-center justify-center cursor-pointer opacity-70 hover:opacity-100 transition-opacity z-40 bg-black/50 backdrop-blur-sm rounded-full p-3 hover:bg-black/70 md:hidden"
-                onClick={nextImage}
-                aria-label="Next image"
-              >
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M9 18L15 12L9 6" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                </svg>
-              </button>
-            )}
           </div>
                      {/* Pagination and Dots */}
            <div className="flex flex-col items-center mt-2 mb-2 z-50">
