@@ -75,8 +75,11 @@ export default function Contact() {
           {/* About Text */}
           <div className="text-center lg:text-left mb-8 lg:mb-12">
             <p className="text-white font-[Manrope] text-lg sm:text-xl lg:text-2xl font-light leading-relaxed max-w-[600px]">
-              My name is Tomás Mateus. I'm a freelance Colorist based in Lisbon, Portugal, with a Bachelor's degree 
-              in Cinema from Lusófona University.
+              My name is Tomás Mateus and I’m a freelance Colorist, based in Lisbon, Portugal. <br></br> <br></br>
+              I have a bachelors degree in cinema, and since a young age I’ve been exploring photography and visual arts. Due to my 2 years of experience working for a creative agency, I have the knowledge and understanding of the workflows of big companies/clients.
+              Over the past few years, as a freelance Colorist, the projects I've worked on have allowed me to develop my own distinctive look. Right now, I have all the tools to deliver something meaningful for every collaboration. <br></br> <br></br>
+
+              I’m available to work remotely, let’s create.
             </p>
           </div>
 
