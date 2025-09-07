@@ -22,25 +22,6 @@ export default function Contact() {
         </Link>
       </div>
 
-      {/* Sidebar Navigation */}
-      <div className="fixed top-0 right-0 h-full flex flex-col items-end justify-center pr-9 z-40 select-none mix-blend-difference">
-        <div className="text-right space-y-1">
-          <Link 
-            href="/" 
-            className="block transition-all duration-500 ease-out focus:outline-none hover:scale-110"
-            style={{ color: '#FFF', fontFamily: 'Manrope', fontSize: '28px', fontWeight: 650, lineHeight: 'normal', width: 'fit-content', marginLeft: 'auto' }}
-          >
-            WORK
-          </Link>
-          <Link 
-            href="/contact" 
-            className="block transition-all duration-500 ease-out mt-8 hover:scale-110"
-            style={{ color: '#FFF', fontFamily: 'Manrope', fontSize: '28px', fontWeight: 650, lineHeight: 'normal', width: 'fit-content', marginLeft: 'auto' }}
-          >
-            CONTACT
-          </Link>
-        </div>
-      </div>
 
       {/* Main Content */}
       <div className="relative z-10 flex flex-col lg:flex-row items-center justify-center min-h-screen pt-20 sm:pt-16 pb-20 sm:pb-16 px-4 sm:px-8">
