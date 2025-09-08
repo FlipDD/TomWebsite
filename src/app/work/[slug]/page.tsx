@@ -569,7 +569,7 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
         </div>
 
         {/* Image Grid */}
-        {images.length > 1 && (
+        {images.length > 0 && (
           <div className="w-screen mb-16 overflow-x-hidden">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-0 w-screen">
               {images.slice(1).map((img, i) => (
