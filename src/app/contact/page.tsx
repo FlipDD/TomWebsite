@@ -61,7 +61,7 @@ export default function Contact() {
 
               Right now, I have all the tools to deliver something meaningful for every collaboration. <br></br><br></br>
 
-              I’m available to work remotely, let’s create
+              <b> I'm available to work remotely, let’s create </b>
             </p>
           </div>
 
@@ -70,8 +70,15 @@ export default function Contact() {
             <div>
               <a 
                 href="mailto:tomasmateus@gmail.com" 
-                className="block text-white text-lg sm:text-xl lg:text-2xl font-light font-[Manrope] hover:opacity-80 transition-opacity duration-300"
+                className="flex items-center justify-center lg:justify-start gap-3 text-white text-lg sm:text-xl lg:text-2xl font-light font-[Manrope] hover:opacity-80 transition-opacity duration-300"
               >
+                <Image 
+                  src="/Icon/Email Icon.png" 
+                  alt="Email Icon" 
+                  width={24} 
+                  height={24}
+                  className="w-6 h-6"
+                />
                 tomasmateus@gmail.com
               </a>
             </div>
@@ -80,8 +87,15 @@ export default function Contact() {
                 href="https://instagram.com/tommmateus" 
                 target="_blank" 
                 rel="noopener noreferrer" 
-                className="block text-white text-lg sm:text-xl lg:text-2xl font-light font-[Manrope] hover:opacity-80 transition-opacity duration-300"
+                className="flex items-center justify-center lg:justify-start gap-3 text-white text-lg sm:text-xl lg:text-2xl font-light font-[Manrope] hover:opacity-80 transition-opacity duration-300"
               >
+                <Image 
+                  src="/Icon/Instagram Icon.png" 
+                  alt="Instagram Icon" 
+                  width={24} 
+                  height={24}
+                  className="w-6 h-6"
+                />
                 @tommmateus
               </a>
             </div>
