@@ -1,0 +1,43 @@
+{
+  "name": "Tomás Mateus - Colorist Portfolio",
+  "short_name": "Tomás Mateus",
+  "description": "Freelance Colorist based in Lisbon, Portugal. Specializing in creative looks for music videos and films.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#000000",
+  "theme_color": "#000000",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/Icon/Icon Website_16x16.ico",
+      "sizes": "16x16",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "/Icon/Icon Website_32x32.ico",
+      "sizes": "32x32",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "/Icon/Icon Website_48x48.ico",
+      "sizes": "48x48",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "/Icon/Icon Website_64x64.ico",
+      "sizes": "64x64",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "/Icon/Icon Website_128x128.ico",
+      "sizes": "128x128",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "/Icon/Icon Website_512x512.ico",
+      "sizes": "512x512",
+      "type": "image/x-icon",
+      "purpose": "any maskable"
+    }
+  ]
+}
