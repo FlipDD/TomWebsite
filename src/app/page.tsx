@@ -10,49 +10,9 @@ const projects = [
     slug: 'ana-moura',
   },
   {
-    title: 'VSP AST - AGUARELA',
-    image: '/portfolio/vsp.jpg',
-    slug: 'vsp',
-  },
-  {
     title: 'Richie Campbell - Before I Lose My Voice',
     image: '/portfolio/richie.jpg',
     slug: 'richie',
-  },
-  {
-    title: 'Nenny - Normal',
-    image: '/portfolio/nenny.jpg',
-    slug: 'nenny',
-  },
-  {
-    title: 'Murta, JÜRA - INVISÍVEL',
-    image: '/portfolio/murta-jura.jpg',
-    slug: 'murta-jura',
-  },
-  {
-    title: 'Hodierno',
-    image: '/portfolio/hodierno.jpg',
-    slug: 'hodierno',
-  },
-  {
-    title: 'Capital da Bulgária - Família',
-    image: '/portfolio/capital-bulgaria.jpg',
-    slug: 'capital-bulgaria',
-  },
-  {
-    title: 'BLAYA - Quero Saber',
-    image: '/portfolio/blaya.jpg',
-    slug: 'blaya',
-  },
-  {
-    title: '7777 の天使 - All Ends With Nothing',
-    image: '/portfolio/7777angels.jpg',
-    slug: '7777angels',
-  },
-  {
-    title: 'Ross K - What You’re Feeling',
-    image: '/portfolio/rossk.jpg',
-    slug: 'rossk_whatufeeling',
   },
   {
     title: 'Ricardo Ribeiro - Má Sorte',
@@ -60,14 +20,9 @@ const projects = [
     slug: 'ricardoribeiro_masorte',
   },
   {
-    title: 'Aurora Pinto - Cães e Gatos',
-    image: '/portfolio/aurora.jpg',
-    slug: 'aurora_pinto',
-  },
-  {
-    title: 'Pedro Mafama - milésimo de segundo ( feat Cheb Nassim )',
-    image: '/portfolio/mafama.jpg',
-    slug: 'pedro_mafama_milesimo',
+    title: 'Sotaques 2025',
+    image: '/portfolio/sotaques.jpg',
+    slug: 'sotaques',
   },
   {
     title: 'Napa feat. Van Zee - Infinito',
@@ -75,19 +30,14 @@ const projects = [
     slug: 'napa_vanzee',
   },
   {
-    title: 'Sotaques 2025',
-    image: '/portfolio/sotaques.jpg',
-    slug: 'sotaques',
+    title: 'Pedro Mafama - milésimo de segundo ( feat Cheb Nassim )',
+    image: '/portfolio/mafama.jpg',
+    slug: 'pedro_mafama_milesimo',
   },
   {
-    title: 'LUCY VAL - ENFIM',
-    image: '/portfolio/lucyval.jpg',
-    slug: 'lucy_val',
-  },
-  {
-    title: 'Mishlawi - Done Playing',
-    image: '/portfolio/mishlawi.jpg',
-    slug: 'mishlawi',
+    title: 'VSP AST - AGUARELA',
+    image: '/portfolio/vsp.jpg',
+    slug: 'vsp',
   },
   {
     title: 'TIXA - ACORDAR',
@@ -95,9 +45,59 @@ const projects = [
     slug: 'tixa_acordar',
   },
   {
+    title: '7777 の天使 - All Ends With Nothing',
+    image: '/portfolio/7777angels.jpg',
+    slug: '7777angels',
+  },
+  {
+    title: 'Aurora Pinto - Cães e Gatos',
+    image: '/portfolio/aurora.jpg',
+    slug: 'aurora_pinto',
+  },
+  {
+    title: 'BLAYA - Quero Saber',
+    image: '/portfolio/blaya.jpg',
+    slug: 'blaya',
+  },
+  {
+    title: 'Murta, JÜRA - INVISÍVEL',
+    image: '/portfolio/murta-jura.jpg',
+    slug: 'murta-jura',
+  },
+  {
+    title: 'Mishlawi - Done Playing',
+    image: '/portfolio/mishlawi.jpg',
+    slug: 'mishlawi',
+  },
+  {
     title: 'TIXA - ME TIME',
     image: '/portfolio/tixa-metime.jpg',
     slug: 'tixa_metime',
+  },
+  {
+    title: 'Nenny - Normal',
+    image: '/portfolio/nenny.jpg',
+    slug: 'nenny',
+  },
+  {
+    title: 'LUCY VAL - ENFIM',
+    image: '/portfolio/lucyval.jpg',
+    slug: 'lucy_val',
+  },
+  {
+    title: 'Capital da Bulgária - Família',
+    image: '/portfolio/capital-bulgaria.jpg',
+    slug: 'capital-bulgaria',
+  },
+  {
+    title: 'Ross K - What You’re Feeling',
+    image: '/portfolio/rossk.jpg',
+    slug: 'rossk_whatufeeling',
+  },
+  {
+    title: 'Hodierno',
+    image: '/portfolio/hodierno.jpg',
+    slug: 'hodierno',
   },
 ];
 
