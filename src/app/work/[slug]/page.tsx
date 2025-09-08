@@ -319,12 +319,30 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
     setTouchEnd(0);
   };
 
-  // Cleanup effect to restore body overflow when component unmounts
+  // Keyboard navigation
   useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (!carouselOpen) return;
+      
+      if (e.key === 'ArrowLeft') {
+        e.preventDefault();
+        prevImage();
+      } else if (e.key === 'ArrowRight') {
+        e.preventDefault();
+        nextImage();
+      } else if (e.key === 'Escape') {
+        e.preventDefault();
+        closeCarousel();
+      }
+    };
+
+    document.addEventListener('keydown', handleKeyDown);
+    
     return () => {
+      document.removeEventListener('keydown', handleKeyDown);
       document.body.style.overflow = 'auto';
     };
-  }, []);
+  }, [carouselOpen]);
 
   if (!project) {
     return (
