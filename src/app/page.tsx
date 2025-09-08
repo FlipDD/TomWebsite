@@ -142,15 +142,28 @@ export default function Home() {
       <section className="relative min-h-screen w-full flex flex-col justify-between" style={{ minHeight: '100vh' }}>
         {/* Background Video */}
         <div className="absolute inset-0 -z-10">
+          {/* Desktop/Tablet Video */}
           <video
             autoPlay
             muted
             loop
             playsInline
-            className="object-cover w-full h-full"
+            className="object-cover w-full h-full hidden sm:block"
             style={{ objectPosition: 'top' }}
           >
             <source src="/videolandingpage.mp4" type="video/mp4" />
+          </video>
+          
+          {/* Mobile Video */}
+          <video
+            autoPlay
+            muted
+            loop
+            playsInline
+            className="object-cover w-full h-full block sm:hidden"
+            style={{ objectPosition: 'top' }}
+          >
+            <source src="/videolandingpage_vertical.mp4" type="video/mp4" />
           </video>
         </div>
       </section>
