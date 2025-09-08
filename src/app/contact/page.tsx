@@ -73,7 +73,7 @@ export default function Contact() {
                 className="flex items-center justify-center lg:justify-start gap-3 text-white text-lg sm:text-xl lg:text-2xl font-light font-[Manrope] hover:opacity-80 transition-opacity duration-300"
               >
                 <Image 
-                  src="/Icon/Email Icon.png" 
+                  src="/Icon/Email Icon.svg" 
                   alt="Email Icon" 
                   width={24} 
                   height={24}
@@ -90,7 +90,7 @@ export default function Contact() {
                 className="flex items-center justify-center lg:justify-start gap-3 text-white text-lg sm:text-xl lg:text-2xl font-light font-[Manrope] hover:opacity-80 transition-opacity duration-300"
               >
                 <Image 
-                  src="/Icon/Instagram Icon.png" 
+                  src="/Icon/Instagram Icon.svg" 
                   alt="Instagram Icon" 
                   width={24} 
                   height={24}
