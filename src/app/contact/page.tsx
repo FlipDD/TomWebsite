@@ -61,7 +61,7 @@ export default function Contact() {
 
               Right now, I have all the tools to deliver something meaningful for every collaboration. <br></br><br></br>
 
-              <b> I'm available to work remotely, let’s create </b>
+              <span className="font-bold"> I'm available to work remotely, let's create! </span>
             </p>
           </div>
 
