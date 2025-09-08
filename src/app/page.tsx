@@ -50,7 +50,7 @@ const projects = [
     slug: '7777angels',
   },
   {
-    title: 'Ross K - What Youre Feeling',
+    title: 'Ross K - What You’re Feeling',
     image: '/portfolio/rossk.jpg',
     slug: 'rossk_whatufeeling',
   },

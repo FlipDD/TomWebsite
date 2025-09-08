@@ -126,7 +126,7 @@ const projects: { [key: string]: Project } = {
     videoUrl: 'https://www.youtube.com/watch?v=5rKAEceBmPk',
     },
   'rossk_whatufeeling': {
-    title: 'Ross K - What Youre Feeling',
+    title: 'Ross K - What You’re Feeling',
     description: 'Music video for Ross K',
     credits: [
       { title: 'Director', people: ['João Marques'] },
