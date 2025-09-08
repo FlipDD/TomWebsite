@@ -54,12 +54,14 @@ export default function Contact() {
         <div className="flex-1 flex flex-col justify-center items-center lg:items-start px-2 sm:px-8 max-w-2xl mx-auto lg:mx-0">
           {/* About Text */}
           <div className="text-center lg:text-left mb-8 lg:mb-12">
-            <p className="text-white font-[Manrope] text-lg sm:text-xl lg:text-2xl font-light leading-relaxed max-w-[600px]">
-              My name is Tomás Mateus and I’m a freelance Colorist, based in Lisbon, Portugal. <br></br> <br></br>
-              I have a bachelors degree in cinema, and since a young age I’ve been exploring photography and visual arts. Due to my 2 years of experience working for a creative agency, I have the knowledge and understanding of the workflows of big companies/clients.
-              Over the past few years, as a freelance Colorist, the projects I've worked on have allowed me to develop my own distinctive look. Right now, I have all the tools to deliver something meaningful for every collaboration. <br></br> <br></br>
+            <p className="text-white font-[Manrope] text-lg sm:text-xl lg:text-1xl font-light leading-relaxed max-w-[600px]">
+              My name is Tomás Mateus and I’m a freelance Colorist, based in Lisbon, Portugal. <br></br>
+              I have a bachelors degree in Cinema, and since a young age I’ve been exploring photography and visual arts. <br></br>
+              Due to my 2 years of experience working for a creative agency, I have a solid understanding of the workflows of big companies/clients, and over the past few years, as a freelance Colorist, the projects I've worked on have allowed me to develop my own distinctive look. <br></br><br></br>
 
-              I’m available to work remotely, let’s create.
+              Right now, I have all the tools to deliver something meaningful for every collaboration. <br></br><br></br>
+
+              I’m available to work remotely, let’s create
             </p>
           </div>
 
