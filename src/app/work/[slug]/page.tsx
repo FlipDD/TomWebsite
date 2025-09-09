@@ -512,7 +512,7 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
       {/* Main Content */}
       <div className="relative z-10 flex flex-col items-center justify-center min-h-screen pt-32 pb-16">
         {/* Main Video/Image with Play Button */}
-        {project.videoUrl ? (
+        {project.videoUrl && project.videoUrl.trim() !== '' ? (
           <div className="relative w-full max-w-4xl aspect-video mx-auto mb-16">
             <iframe
               src={project.videoUrl.replace('watch?v=', 'embed/')}
@@ -522,26 +522,6 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen
             ></iframe>
-          </div>
-        ) : images.length > 0 ? (
-          <div className="relative w-full max-w-4xl aspect-video mx-auto mb-16">
-            <Image 
-              src={images[0]} 
-              alt={project.title} 
-              fill 
-              className="object-cover transition-all duration-1000 ease-out hover:scale-105 cursor-pointer"
-              priority 
-              onClick={() => openCarousel(0)}
-              loading="eager"
-            />
-            <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-              <div className="glass-effect p-4 backdrop-blur-md">
-                <svg width="80" height="80" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg" className="opacity-90">
-                  <circle cx="60" cy="60" r="60" fill="rgba(0,0,0,0.3)" />
-                  <polygon points="50,40 90,60 50,80" fill="#fff" />
-                </svg>
-              </div>
-            </div>
           </div>
         ) : null}
 
