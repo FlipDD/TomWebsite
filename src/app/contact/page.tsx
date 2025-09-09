@@ -24,7 +24,7 @@ export default function Contact() {
 
 
       {/* Main Content */}
-        <div className="relative z-10 flex flex-col lg:flex-row items-start justify-start min-h-screen pt-32 sm:pt-28 px-4 sm:px-8 lg:items-center">
+        <div className="relative z-10 flex flex-col lg:flex-row items-start justify-start px-4 sm:px-8 lg:items-center" style={{ paddingTop: '120px' }}>
         {/* Images Section - Responsive sizing */}
         <div className="flex flex-col justify-start items-start w-full max-w-[560px] mb-16 lg:mb-0 lg:mr-16">
           {/* Self Portrait - Responsive sizing */}
