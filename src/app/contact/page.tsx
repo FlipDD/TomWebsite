@@ -24,9 +24,9 @@ export default function Contact() {
 
 
       {/* Main Content */}
-      <div className="relative z-10 flex flex-col lg:flex-row items-center justify-center min-h-screen pt-20 sm:pt-16 pb-20 sm:pb-16 px-4 sm:px-8">
+        <div className="relative z-10 flex flex-col lg:flex-row items-start justify-start min-h-screen pt-32 sm:pt-28 px-4 sm:px-8">
         {/* Images Section - Responsive sizing */}
-        <div className="flex flex-col justify-center items-center lg:items-start w-full max-w-[560px] mb-8 lg:mb-0 lg:mr-8">
+        <div className="flex flex-col justify-start items-start w-full max-w-[560px] mb-16 lg:mb-0 lg:mr-16">
           {/* Self Portrait - Responsive sizing */}
           <div className="relative w-full max-w-[609px] aspect-[676.82/670.40] mb-4">
             <Image
@@ -51,9 +51,9 @@ export default function Contact() {
         </div>
 
         {/* About and Contact Info - Responsive text and layout */}
-        <div className="flex-1 flex flex-col justify-center items-center lg:items-start px-2 sm:px-8 max-w-2xl mx-auto lg:mx-0">
+        <div className="flex-1 flex flex-col justify-center items-start px-2 sm:px-8 max-w-2xl">
           {/* About Text */}
-          <div className="text-center lg:text-left mb-8 lg:mb-12">
+          <div className="text-left mb-8 lg:mb-12">
             <p className="text-white font-[Manrope] text-lg sm:text-xl lg:text-1xl font-light leading-relaxed max-w-[600px]">
               My name is Tomás Mateus and I’m a freelance Colorist, based in Lisbon, Portugal. <br></br>
               I have a bachelors degree in Cinema, and since a young age I’ve been exploring photography and visual arts. <br></br>
@@ -66,11 +66,11 @@ export default function Contact() {
           </div>
 
           {/* Contact Links */}
-          <div className="space-y-4 sm:space-y-2 text-center lg:text-left">
+          <div className="space-y-4 sm:space-y-2 text-left">
             <div>
               <a 
                 href="mailto:tomasmateus@gmail.com" 
-                className="flex items-center justify-center lg:justify-start gap-3 text-white text-lg sm:text-xl lg:text-2xl font-light font-[Manrope] hover:opacity-80 transition-opacity duration-300"
+                className="flex items-center justify-start gap-3 text-white text-lg sm:text-xl lg:text-2xl font-light font-[Manrope] hover:opacity-80 transition-opacity duration-300"
               >
                 <Image 
                   src="/Icon/Email Icon.svg" 
@@ -87,7 +87,7 @@ export default function Contact() {
                 href="https://instagram.com/tommmateus" 
                 target="_blank" 
                 rel="noopener noreferrer" 
-                className="flex items-center justify-center lg:justify-start gap-3 text-white text-lg sm:text-xl lg:text-2xl font-light font-[Manrope] hover:opacity-80 transition-opacity duration-300"
+                className="flex items-center justify-start gap-3 text-white text-lg sm:text-xl lg:text-2xl font-light font-[Manrope] hover:opacity-80 transition-opacity duration-300"
               >
                 <Image 
                   src="/Icon/Instagram Icon.svg" 
