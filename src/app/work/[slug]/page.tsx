@@ -459,7 +459,7 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
                      {/* Pagination and Dots */}
            <div className="flex flex-col items-center mt-2 mb-2 z-50">
              {/* Image Counter */}
-             <div className="text-white text-lg font-medium mb-2" style={{ fontFamily: 'Manrope' }}>
+             <div className="text-white text-xs sm:text-sm md:text-base lg:text-base font-medium mb-2" style={{ fontFamily: 'Manrope' }}>
                {carouselIndex + 1} / {images.length}
              </div>
              
