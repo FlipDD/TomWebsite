@@ -104,7 +104,7 @@ export default function Contact() {
       </div>
 
       {/* Footer */}
-      <footer className="w-full text-center mt-auto">
+      <footer className="w-full text-center mt-auto pt-4">
         <p className="text-white text-xs sm:text-sm md:text-base lg:text-base font-[Manrope] m-0 p-2">
           © 2025 Tomás Mateus. All rights reserved
         </p>
