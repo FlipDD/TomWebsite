@@ -30,7 +30,7 @@ const projects = [
     slug: 'napa_vanzee',
   },
   {
-    title: 'Pedro Mafama - milésimo de segundo ( feat Cheb Nassim )',
+    title: 'Pedro Mafama - milésimo de segundo (feat. Cheb Nassim)',
     image: '/portfolio/mafama.jpg',
     slug: 'pedro_mafama_milesimo',
   },
