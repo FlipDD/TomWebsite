@@ -464,15 +464,15 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
              </div>
              
              {/* Dots */}
-             <div className="relative flex justify-center items-center" style={{ width: `${images.length * 16 - 4}px`, height: '12px' }}>
+             <div className="relative flex justify-center items-center" style={{ width: `${images.length * 8 - 2}px`, height: '6px' }}>
                {images.map((_, idx) => (
                  <button
                    key={idx}
                    className="absolute rounded-full"
                    style={{
-                     width: '12px',
-                     height: '12px',
-                     left: `${idx * 16.36}px`,
+                     width: '6px',
+                     height: '6px',
+                     left: `${idx * 8.18}px`,
                      background: '#D9D9D9',
                      opacity: carouselIndex === idx ? 1 : 0.41,
                      transition: 'opacity 0.2s',
