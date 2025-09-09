@@ -51,10 +51,10 @@ export default function Contact() {
         </div>
 
         {/* About and Contact Info - Responsive text and layout */}
-        <div className="flex-1 flex flex-col justify-center items-start px-2 sm:px-8 max-w-2xl lg:justify-center">
+        <div className="flex-1 flex flex-col justify-center items-start px-2 sm:px-8 max-w-3xl lg:justify-center">
           {/* About Text */}
           <div className="text-left mb-8 lg:mb-12">
-            <p className="text-white font-[Manrope] text-lg sm:text-xl lg:text-1xl font-light leading-relaxed max-w-[600px]">
+            <p className="text-white font-[Manrope] text-lg sm:text-xl lg:text-1xl font-light leading-relaxed">
               My name is Tomás Mateus and I’m a freelance Colorist, based in Lisbon, Portugal. <br></br>
               I have a bachelors degree in Cinema, and since a young age I’ve been exploring photography and visual arts. <br></br>
               Due to my 2 years of experience working for a creative agency, I have a solid understanding of the workflows of big companies/clients, and over the past few years, as a freelance Colorist, the projects I've worked on have allowed me to develop my own distinctive look. <br></br><br></br>
