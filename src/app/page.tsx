@@ -5,14 +5,14 @@ import Link from "next/link";
 
 const projects = [
   {
-    title: 'Ana Moura - Desliza',
-    image: '/portfolio/ana-moura.jpg',
-    slug: 'ana-moura',
-  },
-  {
     title: 'Richie Campbell - Before I Lose My Voice',
     image: '/portfolio/richie.jpg',
     slug: 'richie',
+  },
+  {
+    title: 'Ana Moura - Desliza',
+    image: '/portfolio/ana-moura.jpg',
+    slug: 'ana-moura',
   },
   {
     title: 'Ricardo Ribeiro - Má Sorte',
@@ -98,6 +98,16 @@ const projects = [
     title: 'Hodierno',
     image: '/portfolio/hodierno.jpg',
     slug: 'hodierno',
+  },
+  {
+    title: 'Ricardo Ribeiro feat Ana Moura - Maré',
+    image: '/portfolio/RicardoRibeiro_mare.jpg',
+    slug: 'ricardoribeiro_mare',
+  },
+  {
+    title: 'Filipe Karlson - Parece, Parece',
+    image: '/portfolio/Karlson.jpg',
+    slug: 'karlson_parece',
   },
 ];
 

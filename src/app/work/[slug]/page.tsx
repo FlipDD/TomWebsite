@@ -25,6 +25,8 @@ const projectFolders: { [key: string]: string } = {
   'mishlawi': 'Mishlawi - Done Playing',
   'tixa_acordar': 'TIXA - ACORDAR',
   'tixa_metime': 'TIXA - ME TIME',
+  'ricardoribeiro_mare': 'Ricardo Ribeiro feat Ana Moura - Maré',
+  'karlson_parece': 'Filipe Karlson - Parece, Parece',
 }
 
 interface Credit {
@@ -216,6 +218,24 @@ const projects: { [key: string]: Project } = {
     ],
     videoUrl: 'https://www.youtube.com/watch?v=JBepWAjUdqY',
   },
+  'karlson_parece': {
+    title: 'Filipe Karlson - Parece, Parece' ,
+    description: 'Music video for Filipe Karlson',
+    credits: [
+      { title: 'Director', people: ['Tommy Loureiro'] },
+    ],
+    videoUrl: 'https://youtu.be/pcqVH09Zb2w?si=9r-SbnCe-qLElUlQ',
+  },
+  'ricardoribeiro_mare': {
+    title: 'Ricardo Ribeiro feat Ana Moura - Maré' ,
+    description: 'Music video for Ricardo Ribeiro feat Ana Moura',
+    credits: [
+      { title: 'Director', people: ['André Caniços'] },
+      { title: 'Director of Photography', people: ['Pedro Patrocínio'] },
+    ],
+    videoUrl: 'https://youtu.be/EFcrQtBhBNk?si=cl8TzAWybKiEnkzA',
+  },
+  
 }
 
 function getProjectImages(slug: string) {
@@ -249,6 +269,8 @@ function getProjectImages(slug: string) {
     'mishlawi': 6,
     'tixa_acordar': 12,
     'tixa_metime': 6,
+    'ricardoribeiro_mare': 9,
+    'karlson_parece': 9,
   };
 
   const count = imageCounts[slug] || 0;
