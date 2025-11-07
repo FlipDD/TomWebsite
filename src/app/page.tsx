@@ -5,19 +5,19 @@ import Link from "next/link";
 
 const projects = [
   {
-    title: 'Richie Campbell - Before I Lose My Voice',
-    image: '/portfolio/richie.jpg',
-    slug: 'richie',
-  },
-  {
     title: 'Ana Moura - Desliza',
     image: '/portfolio/ana-moura.jpg',
     slug: 'ana-moura',
   },
   {
-    title: 'Ricardo Ribeiro - Má Sorte',
-    image: '/portfolio/ricardoribeiro.jpg',
-    slug: 'ricardoribeiro_masorte',
+    title: 'Richie Campbell - Before I Lose My Voice',
+    image: '/portfolio/richie.jpg',
+    slug: 'richie',
+  },
+  {
+    title: 'Ricardo Ribeiro feat Ana Moura - Maré',
+    image: '/portfolio/RicardoRibeiro_mare.jpg',
+    slug: 'ricardoribeiro_mare',
   },
   {
     title: 'Sotaques 2025',
@@ -35,14 +35,9 @@ const projects = [
     slug: 'pedro_mafama_milesimo',
   },
   {
-    title: 'VSP AST - AGUARELA',
-    image: '/portfolio/vsp.jpg',
-    slug: 'vsp',
-  },
-  {
-    title: 'TIXA - ACORDAR',
-    image: '/portfolio/tixa-acordar.jpg',
-    slug: 'tixa_acordar',
+    title: 'Ricardo Ribeiro - Má Sorte',
+    image: '/portfolio/ricardoribeiro.jpg',
+    slug: 'ricardoribeiro_masorte',
   },
   {
     title: '7777 の天使 - All Ends With Nothing',
@@ -50,9 +45,19 @@ const projects = [
     slug: '7777angels',
   },
   {
-    title: 'Aurora Pinto - Cães e Gatos',
-    image: '/portfolio/aurora.jpg',
-    slug: 'aurora_pinto',
+    title: 'TIXA - ACORDAR',
+    image: '/portfolio/tixa-acordar.jpg',
+    slug: 'tixa_acordar',
+  },
+  {
+    title: 'VSP AST - AGUARELA',
+    image: '/portfolio/vsp.jpg',
+    slug: 'vsp',
+  },
+  {
+    title: 'Filipe Karlson - Parece, Parece',
+    image: '/portfolio/Karlson.jpg',
+    slug: 'karlson_parece',
   },
   {
     title: 'BLAYA - Quero Saber',
@@ -68,6 +73,11 @@ const projects = [
     title: 'Mishlawi - Done Playing',
     image: '/portfolio/mishlawi.jpg',
     slug: 'mishlawi',
+  },
+  {
+    title: 'Aurora Pinto - Cães e Gatos',
+    image: '/portfolio/aurora.jpg',
+    slug: 'aurora_pinto',
   },
   {
     title: 'TIXA - ME TIME',
@@ -98,16 +108,6 @@ const projects = [
     title: 'Hodierno',
     image: '/portfolio/hodierno.jpg',
     slug: 'hodierno',
-  },
-  {
-    title: 'Ricardo Ribeiro feat Ana Moura - Maré',
-    image: '/portfolio/RicardoRibeiro_mare.jpg',
-    slug: 'ricardoribeiro_mare',
-  },
-  {
-    title: 'Filipe Karlson - Parece, Parece',
-    image: '/portfolio/Karlson.jpg',
-    slug: 'karlson_parece',
   },
 ];
 
