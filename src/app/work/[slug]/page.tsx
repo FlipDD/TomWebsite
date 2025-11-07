@@ -27,6 +27,7 @@ const projectFolders: { [key: string]: string } = {
   'tixa_metime': 'TIXA - ME TIME',
   'ricardoribeiro_mare': 'Ricardo Ribeiro feat Ana Moura - Maré',
   'karlson_parece': 'Filipe Karlson - Parece, Parece',
+  'tixa_diferente': 'TIXA - DIFERENTE',
 }
 
 interface Credit {
@@ -235,6 +236,17 @@ const projects: { [key: string]: Project } = {
     ],
     videoUrl: 'https://www.youtube.com/watch?v=EFcrQtBhBNk',
   },
+  'tixa_diferente': {
+    title: 'TIXA - DIFERENTE' ,
+    description: 'Music video for TIXA',
+    credits: [
+      { title: 'Director', people: ['Valdir Furtado'] },
+      { title: 'Director of Photography', people: ['João Nobre'] },
+    ],
+    videoUrl: 'https://www.youtube.com/watch?v=T3l6sassvLE',
+  },
+  
+  
   
 }
 
@@ -271,6 +283,7 @@ function getProjectImages(slug: string) {
     'tixa_metime': 6,
     'ricardoribeiro_mare': 9,
     'karlson_parece': 9,
+    'tixa_diferente': 9,
   };
 
   const count = imageCounts[slug] || 0;
