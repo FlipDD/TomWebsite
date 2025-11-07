@@ -35,11 +35,6 @@ const projects = [
     slug: 'pedro_mafama_milesimo',
   },
   {
-    title: 'Ricardo Ribeiro - Má Sorte',
-    image: '/portfolio/ricardoribeiro.jpg',
-    slug: 'ricardoribeiro_masorte',
-  },
-  {
     title: '7777 の天使 - All Ends With Nothing',
     image: '/portfolio/7777angels.jpg',
     slug: '7777angels',
@@ -53,6 +48,11 @@ const projects = [
     title: 'VSP AST - AGUARELA',
     image: '/portfolio/vsp.jpg',
     slug: 'vsp',
+  },
+  {
+    title: 'Ricardo Ribeiro - Má Sorte',
+    image: '/portfolio/ricardoribeiro.jpg',
+    slug: 'ricardoribeiro_masorte',
   },
   {
     title: 'Filipe Karlson - Parece, Parece',

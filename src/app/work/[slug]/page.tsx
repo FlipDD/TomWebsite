@@ -224,7 +224,7 @@ const projects: { [key: string]: Project } = {
     credits: [
       { title: 'Director', people: ['Tommy Loureiro'] },
     ],
-    videoUrl: 'https://youtu.be/pcqVH09Zb2w?si=9r-SbnCe-qLElUlQ',
+    videoUrl: 'https://www.youtube.com/watch?v=pcqVH09Zb2w',
   },
   'ricardoribeiro_mare': {
     title: 'Ricardo Ribeiro feat Ana Moura - Maré' ,
@@ -233,7 +233,7 @@ const projects: { [key: string]: Project } = {
       { title: 'Director', people: ['André Caniços'] },
       { title: 'Director of Photography', people: ['Pedro Patrocínio'] },
     ],
-    videoUrl: 'https://youtu.be/EFcrQtBhBNk?si=cl8TzAWybKiEnkzA',
+    videoUrl: 'https://www.youtube.com/watch?v=EFcrQtBhBNk',
   },
   
 }
