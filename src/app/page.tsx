@@ -70,6 +70,11 @@ const projects = [
     slug: 'murta-jura',
   },
   {
+    title: 'TIXA - DIFERENTE',
+    image: '/portfolio/tixa_diferente.jpg',
+    slug: 'tixa_diferente',
+  },
+  {
     title: 'Mishlawi - Done Playing',
     image: '/portfolio/mishlawi.jpg',
     slug: 'mishlawi',
