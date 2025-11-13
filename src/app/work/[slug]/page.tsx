@@ -28,6 +28,7 @@ const projectFolders: { [key: string]: string } = {
   'ricardoribeiro_mare': 'Ricardo Ribeiro feat Ana Moura - Maré',
   'karlson_parece': 'Filipe Karlson - Parece, Parece',
   'tixa_diferente': 'TIXA - DIFERENTE',
+  'naomy_atendeotelefone': 'Naomy Vissolela - Atende o Telefone'
 }
 
 interface Credit {
@@ -245,7 +246,15 @@ const projects: { [key: string]: Project } = {
     ],
     videoUrl: 'https://www.youtube.com/watch?v=T3l6sassvLE',
   },
-  
+  'naomy_atendeotelefone': {
+    title: 'Naomy Vissolela - Atende o Telefone' ,
+    description: 'Music video for Naomy Vissolela',
+    credits: [
+      { title: 'Director', people: ['Elison Bartolomeu'] },
+      { title: 'Director of Photography', people: ['Insónia.Tv'] },
+    ],
+    videoUrl: 'https://www.youtube.com/watch?v=YHqg879gngU',
+  },
   
   
 }
@@ -284,6 +293,7 @@ function getProjectImages(slug: string) {
     'ricardoribeiro_mare': 9,
     'karlson_parece': 9,
     'tixa_diferente': 9,
+    'naomy_atendeotelefone': 9,
   };
 
   const count = imageCounts[slug] || 0;

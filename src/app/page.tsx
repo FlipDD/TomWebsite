@@ -59,6 +59,11 @@ const projects = [
     image: '/portfolio/Karlson.jpg',
     slug: 'karlson_parece',
   },
+   {
+    title: 'Naomy Vissolela - Atende o Telefone',
+    image: '/portfolio/naomy_atende.jpg',
+    slug: 'naomy_atendeotelefone',
+  },
   {
     title: 'BLAYA - Quero Saber',
     image: '/portfolio/blaya.jpg',
