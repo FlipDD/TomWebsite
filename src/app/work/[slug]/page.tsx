@@ -255,6 +255,14 @@ const projects: { [key: string]: Project } = {
     ],
     videoUrl: 'https://www.youtube.com/watch?v=YHqg879gngU',
   },
+  'richie_london': {
+    title: 'Richie Campbell live in London' ,
+    description: 'Richie Campbell concert in Electric Brixton, London',
+    credits: [
+      { title: 'Director', people: ['Gerssis David'] },
+    ],
+    videoUrl: 'https://www.youtube.com/watch?v=uBcH9kmxCF0',
+  },
   
   
 }
@@ -294,6 +302,7 @@ function getProjectImages(slug: string) {
     'karlson_parece': 9,
     'tixa_diferente': 9,
     'naomy_atendeotelefone': 9,
+    'richie_london': 9,
   };
 
   const count = imageCounts[slug] || 0;

@@ -10,9 +10,9 @@ const projects = [
     slug: 'ana-moura',
   },
   {
-    title: 'Richie Campbell - Before I Lose My Voice',
-    image: '/portfolio/richie.jpg',
-    slug: 'richie',
+    title: 'Richie Campbell live in London',
+    image: '/portfolio/richie_london.jpg',
+    slug: 'richie_london',
   },
   {
     title: 'Ricardo Ribeiro feat Ana Moura - Maré',
@@ -38,6 +38,11 @@ const projects = [
     title: '7777 の天使 - All Ends With Nothing',
     image: '/portfolio/7777angels.jpg',
     slug: '7777angels',
+  },
+  {
+    title: 'Richie Campbell - Before I Lose My Voice',
+    image: '/portfolio/richie.jpg',
+    slug: 'richie',
   },
   {
     title: 'TIXA - ACORDAR',
