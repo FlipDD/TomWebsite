@@ -29,6 +29,7 @@ const projectFolders: { [key: string]: string } = {
   'karlson_parece': 'Filipe Karlson - Parece, Parece',
   'tixa_diferente': 'TIXA - DIFERENTE',
   'naomy_atendeotelefone': 'Naomy Vissolela - Atende o Telefone'
+  'richie_london': 'Richie Campbell live in London'
 }
 
 interface Credit {
