@@ -327,7 +327,7 @@ function getProjectImages(slug: string) {
     'naomy_atendeotelefone': 9,
     'richie_london': 9,
     'vizinhas': 9,
-    'marie': 9
+    'marie': 15
   };
 
   const count = imageCounts[slug] || 0;

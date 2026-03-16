@@ -20,11 +20,6 @@ const projects = [
     slug: 'ricardoribeiro_mare',
   },
   {
-    title: 'La vie de Maria Manuela',
-    image: '/portfolio/marie.jpg',
-    slug: 'marie',
-  },
-  {
     title: 'Sotaques 2025',
     image: '/portfolio/sotaques.jpg',
     slug: 'sotaques',
@@ -35,19 +30,24 @@ const projects = [
     slug: 'napa_vanzee',
   },
   {
+    title: 'La vie de Maria Manuela',
+    image: '/portfolio/marie.jpg',
+    slug: 'marie',
+  },
+  {
     title: 'Pedro Mafama - milésimo de segundo (feat. Cheb Nassim)',
     image: '/portfolio/mafama.jpg',
     slug: 'pedro_mafama_milesimo',
   },
   {
-    title: 'Ana Moura - Desliza',
-    image: '/portfolio/ana-moura.jpg',
-    slug: 'ana-moura',
-  },
-  {
     title: '7777 の天使 - All Ends With Nothing',
     image: '/portfolio/7777angels.jpg',
     slug: '7777angels',
+  },
+  {
+    title: 'Ana Moura - Desliza',
+    image: '/portfolio/ana-moura.jpg',
+    slug: 'ana-moura',
   },
   {
     title: 'Richie Campbell - Before I Lose My Voice',
