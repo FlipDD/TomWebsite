@@ -5,9 +5,9 @@ import Link from "next/link";
 
 const projects = [
   {
-    title: 'Ana Moura - Desliza',
-    image: '/portfolio/ana-moura.jpg',
-    slug: 'ana-moura',
+    title: 'Helena Caldeira - Vizinhas',
+    image: '/portfolio/vizinhas.jpg',
+    slug: 'vizinhas',
   },
   {
     title: 'Richie Campbell live in London',
@@ -18,6 +18,11 @@ const projects = [
     title: 'Ricardo Ribeiro feat Ana Moura - Maré',
     image: '/portfolio/RicardoRibeiro_mare.jpg',
     slug: 'ricardoribeiro_mare',
+  },
+  {
+    title: 'La vie de Maria Manuela',
+    image: '/portfolio/marie.jpg',
+    slug: 'marie',
   },
   {
     title: 'Sotaques 2025',
@@ -33,6 +38,11 @@ const projects = [
     title: 'Pedro Mafama - milésimo de segundo (feat. Cheb Nassim)',
     image: '/portfolio/mafama.jpg',
     slug: 'pedro_mafama_milesimo',
+  },
+  {
+    title: 'Ana Moura - Desliza',
+    image: '/portfolio/ana-moura.jpg',
+    slug: 'ana-moura',
   },
   {
     title: '7777 の天使 - All Ends With Nothing',

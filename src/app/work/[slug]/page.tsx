@@ -30,6 +30,8 @@ const projectFolders: { [key: string]: string } = {
   'tixa_diferente': 'TIXA - DIFERENTE',
   'naomy_atendeotelefone': 'Naomy Vissolela - Atende o Telefone',
   'richie_london': 'Richie Campbell live in London',
+  'vizinhas': 'Helena Caldeira - Vizinhas',
+  'marie': 'La vie de Maria Manuela',
   
 }
 
@@ -265,6 +267,25 @@ const projects: { [key: string]: Project } = {
     ],
     videoUrl: 'https://www.youtube.com/watch?v=uBcH9kmxCF0',
   },
+  'vizinhas': {
+    title: 'Helena Caldeira - Vizinhas' ,
+    description: 'Short film music project of Helena Caldeira',
+    credits: [
+      { title: 'Director', people: ['Helena Caldeira'] },
+      { title: 'Director of Photography', people: ['Afonso Vieira'] },
+    ],
+    videoUrl: 'https://www.youtube.com/watch?v=QxWtkDcPl3U',
+  },
+  'marie': {
+    title: 'La vie de Maria Manuela' ,
+    description: 'Feature Film - "A fearleess young artist, Maria Manuela refuses to confirm. Filmed over the course of four years by her closest friend, we follow her journey of self-discovery, creativity, and the ups and downs of finding her place in the world"',
+    credits: [
+      { title: 'Director', people: ['João Marques'] },
+      { title: 'Producer', people: ['Justin Amorin'] },
+      { title: 'Prodution Company', people: ['PROMENADE'] },
+    ],
+    videoUrl: '',
+  },
   
   
 }
@@ -305,6 +326,8 @@ function getProjectImages(slug: string) {
     'tixa_diferente': 9,
     'naomy_atendeotelefone': 9,
     'richie_london': 9,
+    'vizinhas': 9,
+    'marie': 9
   };
 
   const count = imageCounts[slug] || 0;
