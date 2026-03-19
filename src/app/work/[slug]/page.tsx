@@ -280,6 +280,7 @@ const projects: { [key: string]: Project } = {
     title: 'La vie de Maria Manuela' ,
     description: 'Feature Film - "A fearleess young artist, Maria Manuela refuses to confirm. Filmed over the course of four years by her closest friend, we follow her journey of self-discovery, creativity, and the ups and downs of finding her place in the world"',
     credits: [
+      { title: 'Synopsis', people: ['"A fearleess young artist, Maria Manuela refuses to confirm. Filmed over the course of four years by her closest friend, we follow her journey of self-discovery, creativity, and the ups and downs of finding her place in the world"'] },
       { title: 'Director', people: ['João Marques'] },
       { title: 'Producer', people: ['Justin Amorin'] },
       { title: 'Prodution Company', people: ['PROMENADE'] },
