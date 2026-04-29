@@ -291,7 +291,7 @@ const projects: { [key: string]: Project } = {
   },
   'mango': {
     title: 'Mango Angola' ,
-    description: 'advertisement for Mango Angola'
+    description: 'Advertisement for Mango Angola',
     credits: [
       { title: 'Director', people: ['Élison Bartolomeu'] },
       { title: 'Co-director', people: ['Kim Praise'] },
@@ -299,14 +299,16 @@ const projects: { [key: string]: Project } = {
     ],
     videoUrl: '',
   },
-  'bbnoya': {
+  'mango': {
     title: 'BB NOYAA - SITUATION CHEAP feat. Ino Casablanca' ,
-    description: 'music video for BB Noyaa'
+    description: 'music video for BB Noyaa',
     credits: [
       { title: 'Director', people: ['Mateo da Silva'] },
       { title: 'Director of Photography', people: ['Matteo Bonaddio'] },
     ],
     videoUrl: 'https://www.youtube.com/watch?v=rz9xJj0rS9c',
+  },
+ 
     
   
   
