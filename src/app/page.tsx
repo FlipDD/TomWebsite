@@ -5,6 +5,16 @@ import Link from "next/link";
 
 const projects = [
   {
+    title: 'BB NOYAA - SITUATION CHEAP feat. Ino Casablanca',
+    image: '/portfolio/bbnoya.jpg',
+    slug: 'bbnoya',
+  },
+  {
+    title: 'Mango Angola',
+    image: '/portfolio/mango.jpg',
+    slug: 'mango',
+  },
+  {
     title: 'Helena Caldeira - Vizinhas',
     image: '/portfolio/vizinhas.jpg',
     slug: 'vizinhas',

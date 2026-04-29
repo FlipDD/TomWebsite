@@ -32,6 +32,7 @@ const projectFolders: { [key: string]: string } = {
   'richie_london': 'Richie Campbell live in London',
   'vizinhas': 'Helena Caldeira - Vizinhas',
   'marie': 'La vie de Maria Manuela',
+  'mango': 'Mango Angola'
   
 }
 
@@ -287,6 +288,25 @@ const projects: { [key: string]: Project } = {
     ],
     videoUrl: '',
   },
+  'mango': {
+    title: 'Mango Angola' ,
+    description: 'advertisement for Mango Angola'
+    credits: [
+      { title: 'Director', people: ['Élison Bartolomeu'] },
+      { title: 'Co-director', people: ['Kim Praise'] },
+      { title: 'Director of Photography', people: ['Carlos Missange'] },
+    ],
+    videoUrl: '',
+  },
+  'bbnoya': {
+    title: 'BB NOYAA - SITUATION CHEAP feat. Ino Casablanca' ,
+    description: 'music video for BB Noyaa'
+    credits: [
+      { title: 'Director', people: ['Mateo da Silva'] },
+      { title: 'Director of Photography', people: ['Matteo Bonaddio'] },
+    ],
+    videoUrl: 'https://www.youtube.com/watch?v=rz9xJj0rS9c',
+    
   
   
 }
@@ -328,7 +348,9 @@ function getProjectImages(slug: string) {
     'naomy_atendeotelefone': 9,
     'richie_london': 9,
     'vizinhas': 9,
-    'marie': 15
+    'marie': 15,
+    'mango': 9
+    'bbnoya': 9
   };
 
   const count = imageCounts[slug] || 0;
