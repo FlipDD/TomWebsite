@@ -299,7 +299,7 @@ const projects: { [key: string]: Project } = {
     ],
     videoUrl: '',
   },
-  'mango': {
+  'bbnoya': {
     title: 'BB NOYAA - SITUATION CHEAP feat. Ino Casablanca' ,
     description: 'music video for BB Noyaa',
     credits: [
@@ -354,6 +354,7 @@ function getProjectImages(slug: string) {
     'marie': 15,
     'mango': 9
     'bbnoya': 9
+    
   };
 
   const count = imageCounts[slug] || 0;
