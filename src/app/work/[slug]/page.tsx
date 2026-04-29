@@ -32,8 +32,8 @@ const projectFolders: { [key: string]: string } = {
   'richie_london': 'Richie Campbell live in London',
   'vizinhas': 'Helena Caldeira - Vizinhas',
   'marie': 'La vie de Maria Manuela',
-  'mango': 'Mango Angola'
-  'bbnoya': 'BB NOYAA - SITUATION CHEAP feat. Ino Casablanca'
+  'mango': 'Mango Angola',
+  'bbnoya': 'BB NOYAA - SITUATION CHEAP feat. Ino Casablanca',
   
 }
 
@@ -352,8 +352,8 @@ function getProjectImages(slug: string) {
     'richie_london': 9,
     'vizinhas': 9,
     'marie': 15,
-    'mango': 9
-    'bbnoya': 9
+    'mango': 9,
+    'bbnoya': 9,
     
   };
 
