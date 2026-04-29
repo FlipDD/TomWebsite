@@ -34,6 +34,7 @@ const projectFolders: { [key: string]: string } = {
   'marie': 'La vie de Maria Manuela',
   'mango': 'Mango Angola',
   'bbnoya': 'BB NOYAA - SITUATION CHEAP feat. Ino Casablanca',
+  'fnac': 'FNAC | Mês dos Livros',
   
 }
 
@@ -308,6 +309,15 @@ const projects: { [key: string]: Project } = {
     ],
     videoUrl: 'https://www.youtube.com/watch?v=rz9xJj0rS9c',
   },
+  'fnac': {
+    title: 'FNAC | Mês dos Livros' ,
+    description: 'FNAC | Mês dos Livros',
+    credits: [
+      { title: 'Director', people: ['Peperan'] },
+      { title: 'Director of Photography', people: ['Rafaela Gomes'] },
+    ],
+    videoUrl: 'https://www.youtube.com/watch?v=X4jJKo2zPgs',
+  },
  
     
   
@@ -354,6 +364,7 @@ function getProjectImages(slug: string) {
     'marie': 15,
     'mango': 9,
     'bbnoya': 9,
+    'fnac': 6,
     
   };
 

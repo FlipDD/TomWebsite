@@ -15,6 +15,11 @@ const projects = [
     slug: 'mango',
   },
   {
+    title: 'FNAC | Mês dos Livros',
+    image: '/portfolio/fnac.jpg',
+    slug: 'fnac',
+  },
+  {
     title: 'Helena Caldeira - Vizinhas',
     image: '/portfolio/vizinhas.jpg',
     slug: 'vizinhas',
