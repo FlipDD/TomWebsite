@@ -33,6 +33,7 @@ const projectFolders: { [key: string]: string } = {
   'vizinhas': 'Helena Caldeira - Vizinhas',
   'marie': 'La vie de Maria Manuela',
   'mango': 'Mango Angola'
+  'bbnoya': 'BB NOYAA - SITUATION CHEAP feat. Ino Casablanca'
   
 }
 
