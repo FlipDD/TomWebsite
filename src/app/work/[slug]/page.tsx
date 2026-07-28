@@ -318,6 +318,14 @@ const projects: { [key: string]: Project } = {
     ],
     videoUrl: 'https://www.youtube.com/watch?v=X4jJKo2zPgs',
   },
+   'humantrials': {
+    title: 'Human Trials' ,
+    description: 'Fashion Film',
+    credits: [
+      { title: 'Director of Photography', people: ['Guilherme Proença'] },
+    ],
+    videoUrl: 'https://www.youtube.com/watch?v=9z9iQa0MiwE',
+  },
  
     
   
@@ -365,6 +373,7 @@ function getProjectImages(slug: string) {
     'mango': 9,
     'bbnoya': 9,
     'fnac': 6,
+    'humantrials': 9,
     
   };
 

@@ -25,14 +25,19 @@ const projects = [
     slug: 'vizinhas',
   },
   {
-    title: 'Richie Campbell live in London',
-    image: '/portfolio/richie_london.jpg',
-    slug: 'richie_london',
+    title: 'Human Trials',
+    image: '/portfolio/human_trials.jpg',
+    slug: 'humantrials',
   },
   {
     title: 'Ricardo Ribeiro feat Ana Moura - Maré',
     image: '/portfolio/RicardoRibeiro_mare.jpg',
     slug: 'ricardoribeiro_mare',
+  },
+  {
+    title: 'Richie Campbell live in London',
+    image: '/portfolio/richie_london.jpg',
+    slug: 'richie_london',
   },
   {
     title: 'Sotaques 2025',
