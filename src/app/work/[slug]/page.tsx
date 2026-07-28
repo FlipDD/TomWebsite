@@ -35,6 +35,7 @@ const projectFolders: { [key: string]: string } = {
   'mango': 'Mango Angola',
   'bbnoya': 'BB NOYAA - SITUATION CHEAP feat. Ino Casablanca',
   'fnac': 'FNAC | Mês dos Livros',
+  'humantrials': 'Human Trials'
   
 }
 
